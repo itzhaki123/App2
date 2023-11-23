@@ -1,0 +1,194 @@
+﻿<Page
+    x:Class="App2.MenuPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/Background/forest.jpg"></ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="LevelList" Grid.Row="5" Grid.Column="9" Background="Transparent" Grid.ColumnSpan="2" Grid.RowSpan="15">
+            <Image x:Name ="LevelListImage" Source="/Assets/Buttons/LevelList (1).png" PointerEntered="LevelListImage_PointerEntered" PointerExited="LevelListImage_PointerExited" PointerPressed="LevelListImage_PointerPressed"></Image>
+        </Button>  
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="bthExit" Grid.Row="0" Grid.Column="18" Background="Transparent" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Image x:Name ="exitImage" Source="/Assets/Buttons/Cross (1).png" PointerEntered="exitImage_PointerEntered" PointerExited="exitImage_PointerExited" PointerPressed="exitImage_PointerPressed"></Image>
+        </Button>
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="bthPlay" Grid.Row="0" Grid.Column="9" Background="Transparent" Grid.ColumnSpan="2" Grid.RowSpan="15">
+            <Image x:Name ="playImage" Source="/Assets/Buttons/Play (1).png" PointerEntered="playImage_PointerEntered" PointerExited="playImage_PointerExited"></Image>
+        </Button>
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="musicPlay" Grid.Row="1" Grid.Column="7" Background="Transparent" Grid.ColumnSpan="2" Grid.RowSpan="15">
+            <Image x:Name ="MusicImage" Source="/Assets/Buttons/Music (1).png" PointerEntered="MusicImage_PointerEntered" PointerExited="MusicImage_PointerExited" PointerPressed="MusicImage_PointerPressed"></Image>
+        </Button>
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="SignIn" Grid.Row="1" Grid.Column="11" Background="Transparent" Grid.ColumnSpan="2" Grid.RowSpan="15">
+            <Image x:Name ="SignInImage" Source="/Assets/Buttons/Profile (1).png" PointerEntered="SignInImage_PointerEntered" PointerExited="SignInImage_PointerExited" PointerPressed="SignInImage_PointerPressed"></Image>
+        </Button>
+
+
+        <Grid x:Name="popupGrid" Background="LightYellow" Opacity="1" Grid.Column="3" Grid.ColumnSpan="8" 
+              Grid.Row="4" Grid.RowSpan="7" BorderBrush="White" CornerRadius="10" BorderThickness="6" Visibility="Collapsed">
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock  Grid.Column="0" Grid.ColumnSpan="20" Grid.Row="0" Grid.RowSpan="4" FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center">EXIT THE GAME</TextBlock>
+            <Button Style="{StaticResource MyButtonStyle}" x:Name="btnYes" Grid.Row="8" Grid.RowSpan="4" Grid.Column="4" Grid.ColumnSpan="4"  Background="Transparent">
+                <Image x:Name="PopUpNoImage" Source="/Assets/Buttons/Cross (2).png" PointerEntered="PopUpNoImage_PointerEntered" PointerExited="PopUpNoImage_PointerExited" PointerPressed="PopUpNoImage_PointerPressed" ></Image>
+            </Button>
+            <Button Style="{StaticResource MyButtonStyle}" x:Name="btnNo" Grid.Row="8" Grid.RowSpan="4" Grid.Column="13" Grid.ColumnSpan="4"  Background="Transparent">
+                <Image x:Name="PopUpYesImage" Source="/Assets/Buttons/Check (4).png" PointerEntered="PopUpYesImage_PointerEntered" PointerExited="PopUpYesImage_PointerExited" PointerPressed="PopUpYesImage_PointerPressed" ></Image>
+            </Button>
+            
+        </Grid>
+        <Grid x:Name="MusicGrid" Background="LightYellow" Opacity="1" Grid.Column="7" Grid.ColumnSpan="10"
+    Grid.Row="4" Grid.RowSpan="10" BorderBrush="Black" BorderThickness="6"
+        CornerRadius="15" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Column="3" Grid.ColumnSpan="13">
+                <TextBlock Text="Music Control"
+            HorizontalAlignment="Center" FontSize="40" FontStyle="Oblique"
+                FontFamily="David" FontWeight="Bold" Foreground="Black"></TextBlock>
+            </Viewbox>
+            <Button Style="{StaticResource MyButtonStyle}" x:Name="btnLeftMusic" Grid.Column="15" 
+        Grid.ColumnSpan="3" Grid.RowSpan="3" Background="Transparent">
+                <Image x:Name="leftMusicImage" Source="/Assets/Buttons/Cross (2).png" PointerEntered="leftMusicImage_PointerEntered"
+        PointerExited="leftMusicImage_PointerExited" PointerPressed="leftMusicImage_PointerPressed"></Image>
+            </Button>
+            <Button Style="{StaticResource MyButtonStyle}" x:Name="btnApplyMusic" Grid.Column="8" Grid.Row="7"
+                Grid.ColumnSpan="3" Grid.RowSpan="3" Background="Transparent">
+                <Image x:Name="ApplyMusicImage" Source="/Assets/Buttons/Check (4).png" PointerEntered="ApplyMusicImage_PointerEntered"
+                PointerExited="ApplyMusicImage_PointerExited" PointerPressed="ApplyMusicImage_PointerPressed"></Image>
+            </Button>
+            <ToggleSwitch x:Name="backgroundMusicSw" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="7" Grid.RowSpan="5" IsOn="False"
+                  Toggled="backgroundMusicSw_Toggled" OffContent="Music Off" OnContent="Music On" FontFamily="David"
+                  FontSize="25" FontWeight="Bold">
+            </ToggleSwitch>
+
+            <ToggleSwitch x:Name="effectsMusicSw" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="7" Grid.RowSpan="5" IsOn="False"
+      Toggled="effectsMusicSw_Toggled" OffContent="Effects Off" OnContent="Effects On" FontFamily="David"
+      FontSize="25" FontWeight="Bold">
+            </ToggleSwitch>
+
+            <Slider x:Name="volumeSlider" Maximum="100" Grid.Column="3" Grid.Row="6" Grid.ColumnSpan="11" Grid.RowSpan="2" Header="Volume" IsTextScaleFactorEnabled="True"
+            FontSize="40" FontWeight="Bold" FontFamily="Bradley Hand ITC" ValueChanged="volumeSlider_ValueChanged">
+            </Slider>
+        </Grid>
+    </Grid>
+</Page>

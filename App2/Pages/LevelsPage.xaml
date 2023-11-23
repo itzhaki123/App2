@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="App2.Pages.LevelsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/Background/forest.jpg"></ImageBrush>
+        </Grid.Background>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/Assets/Background/background.png"></ImageBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="1" Grid.Column="5" FontSize="64" Grid.ColumnSpan="4" HorizontalAlignment="Center">Choose Level</TextBlock>
+
+            <Button Style="{StaticResource MyButtonStyle}" x:Name="bthExit" Grid.Row="0" Grid.Column="13" Grid.ColumnSpan="1" Grid.RowSpan="2" Background="Transparent">
+                <Image x:Name="exitImage" Source="/Assets/Buttons/Cross (1).png" PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited" PointerPressed="Image_PointerPressed"></Image>
+            </Button>
+
+            <Button  x:Name="btn1" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="4" Background="Transparent" >
+                <Image x:Name="LvlOneImage" Source="/Assets/Digits/Digit1.png" PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited" PointerPressed="Image_PointerPressed" ></Image>
+            </Button>
+            <Button  x:Name="btn2" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan="4" Background="Transparent"  HorizontalAlignment="Center" Height="285">
+                <Image x:Name="LvlTwoImage" Source="/Assets/Digits/Digit2.png" PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited" PointerPressed="Image_PointerPressed"></Image>
+            </Button>
+            <Button  x:Name="btn3" Grid.Row="4" Grid.Column="8" Grid.ColumnSpan="2" Grid.RowSpan="4" Background="Transparent" >
+                <Image x:Name="LvlThreeImage" Source="/Assets/Digits/Digit3.png" PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited" PointerPressed="Image_PointerPressed"></Image>
+            </Button>
+            <Button x:Name="btn4" Grid.Row="4" Grid.Column="11" Grid.ColumnSpan="2" Grid.RowSpan="4" Background="Transparent" >
+                <Image x:Name="LvlFourImage" Source="/Assets/Digits/Digit4.png" PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited" PointerPressed="Image_PointerPressed"></Image>
+            </Button>
+        </Grid>
+    </Grid>
+
+</Page>
