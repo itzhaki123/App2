@@ -211,6 +211,8 @@
     <Content Include="Assets\Digits\Digit3.png" />
     <Content Include="Assets\Digits\Digit4.png" />
     <Content Include="Assets\Digits\Digit1.png" />
+    <Content Include="Music\MixKit2.mp3" />
+    <Content Include="Music\MixKit.mp3" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -236,7 +238,12 @@
       <Version>6.2.14</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\GameEngine1\GameEngine1.csproj">
+      <Project>{238f4b9e-4505-47ba-b16e-71dc9d895ff9}</Project>
+      <Name>GameEngine1</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

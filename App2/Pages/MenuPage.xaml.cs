@@ -1,4 +1,5 @@
 ﻿using App2.Pages;
+using GameEngine.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -121,7 +122,14 @@ namespace App2
         }
         private void backgroundMusicSw_Toggled(object sender, RoutedEventArgs e)
         {
-
+            if (backgroundMusicSw.IsOn)
+            {
+                MusicPlayer.Play("MixKit.mp3");
+            }
+            else
+            {
+                MusicPlayer.Stop();
+            }
         }
 
         private void effectsMusicSw_Toggled(object sender, RoutedEventArgs e)

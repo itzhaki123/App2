@@ -176,9 +176,9 @@
                 <Image x:Name="ApplyMusicImage" Source="/Assets/Buttons/Check (4).png" PointerEntered="ApplyMusicImage_PointerEntered"
                 PointerExited="ApplyMusicImage_PointerExited" PointerPressed="ApplyMusicImage_PointerPressed"></Image>
             </Button>
-            <ToggleSwitch x:Name="backgroundMusicSw" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="7" Grid.RowSpan="5" IsOn="False"
-                  Toggled="backgroundMusicSw_Toggled" OffContent="Music Off" OnContent="Music On" FontFamily="David"
-                  FontSize="25" FontWeight="Bold">
+            <ToggleSwitch x:Name="backgroundMusicSw" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="7" Grid.RowSpan="5" 
+                  Toggled="backgroundMusicSw_Toggled" OffContent="Music Off" OnContent="Music On" FontFamily="David" 
+                  FontSize="25" FontWeight="Bold" >
             </ToggleSwitch>
 
             <ToggleSwitch x:Name="effectsMusicSw" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="7" Grid.RowSpan="5" IsOn="False"
