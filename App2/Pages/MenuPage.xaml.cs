@@ -193,7 +193,7 @@ namespace App2
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
         }
 
-        private void LevelListImage_PointerPressed(object sender, PointerRoutedEventArgs e)
+        private void LevelListImage_PointerPressed(object sender, PointerRoutedEventArgs e)   
         {
             Frame.Navigate(typeof(LevelsPage));
         }
