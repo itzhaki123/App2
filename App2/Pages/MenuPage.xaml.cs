@@ -178,7 +178,7 @@ namespace App2
 
         private void MusicImage_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            MusicGrid.Visibility = Visibility.Visible;
+            MusicGrid.Visibility = Visibility.Visible; 
         }
 
         private void LevelListImage_PointerEntered(object sender, PointerRoutedEventArgs e)
