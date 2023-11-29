@@ -190,5 +190,6 @@
             FontSize="40" FontWeight="Bold" FontFamily="Bradley Hand ITC" ValueChanged="volumeSlider_ValueChanged">
             </Slider>
         </Grid>
+        
     </Grid>
 </Page>
