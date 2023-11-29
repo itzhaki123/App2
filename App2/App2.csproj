@@ -11,7 +11,7 @@
     <AssemblyName>App2</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.22621.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -239,9 +239,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GameEngine1\GameEngine1.csproj">
-      <Project>{238f4b9e-4505-47ba-b16e-71dc9d895ff9}</Project>
-      <Name>GameEngine1</Name>
+    <ProjectReference Include="..\GameEnginer\GameEnginer.csproj">
+      <Project>{0377c171-064e-414a-992f-6acf404054fc}</Project>
+      <Name>GameEnginer</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
