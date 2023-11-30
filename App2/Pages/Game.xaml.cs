@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -25,6 +26,23 @@ namespace App2.Pages
         public Game()
         {
             this.InitializeComponent();
+        }
+
+        private void exitImage_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            exitImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/Buttons/Cross (2).png"));
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
+        }
+
+        private void exitImage_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            exitImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/Buttons/Cross (1).png"));
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
+        }
+
+        private void exitImage_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MenuPage));
         }
     }
 }

@@ -197,5 +197,10 @@ namespace App2
         {
             Frame.Navigate(typeof(LevelsPage));
         }
+
+        private void playImage_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Game));
+        }
     }
 }
