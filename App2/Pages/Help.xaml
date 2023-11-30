@@ -46,7 +46,27 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
-
         </Grid.ColumnDefinitions>
+        <Grid Background="LightYellow" Opacity="0.8" Grid.Column="4" Grid.ColumnSpan="6"
+              Grid.Row="1" Grid.RowSpan="7" BorderBrush="Black" CornerRadius="10" BorderThickness="6">
+            <ScrollViewer>
+                <TextBlock TextWrapping="Wrap" FontSize="50" FontFamily="David">
+                    <!-- Your text goes here -->
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It 
+                    has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum..
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown p
+                    rinter took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remai
+                    ning essentially unchanged. It was popularised in the 1960s with the
+                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <!-- Add more text as needed -->
+                </TextBlock>
+            </ScrollViewer>
+        </Grid>
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="btnApplyHelp" Grid.Column="6" Grid.Row="10"
+    Grid.ColumnSpan="3" Grid.RowSpan="3" Background="Transparent">
+            <Image x:Name="ApplyMusicImage" Source="/Assets/Buttons/Check (4).png" PointerPressed="ApplyMusicImage_PointerPressed"></Image>
+        </Button>
     </Grid>
 </Page>

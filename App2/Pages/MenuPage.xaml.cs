@@ -28,6 +28,7 @@ namespace App2
         public MenuPage()
         {
             this.InitializeComponent();
+            if (MusicPlayer.IsOn) backgroundMusicSw.IsOn = true; else backgroundMusicSw.IsOn = false;
         }
         private void exitImage_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
@@ -142,13 +143,6 @@ namespace App2
 
         }
 
-
-        private void leftMusicImage_PointerPressed(object sender, PointerRoutedEventArgs e)
-        {
-            MusicGrid.Visibility = Visibility.Collapsed;
-        }
-
-
         private void ApplyMusicImage_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             ApplyMusicImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/Buttons/Check (4).png"));
@@ -191,6 +185,23 @@ namespace App2
         private void playImage_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             Frame.Navigate(typeof(Game));
+        }
+
+        private void HelpImage_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            HelpImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/Buttons/Help (2).png"));
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
+        }
+
+        private void HelpImage_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            HelpImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/Buttons/Help (3).png"));
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
+        }
+
+        private void HelpImage_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Help));
         }
     }
 }

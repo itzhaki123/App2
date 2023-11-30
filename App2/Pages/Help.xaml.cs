@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -25,6 +26,17 @@ namespace App2.Pages
         public Help()
         {
             this.InitializeComponent();
+        }
+
+        private void ApplyMusicImage_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            ApplyMusicImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/Buttons/Check (4).png"));
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
+        }
+
+        private void ApplyMusicImage_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MenuPage));
         }
     }
 }

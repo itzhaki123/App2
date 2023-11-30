@@ -61,6 +61,11 @@
         <Button Style="{StaticResource MyButtonStyle}" x:Name="bthExit" Grid.Row="0" Grid.Column="18" Background="Transparent" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <Image x:Name ="exitImage" Source="/Assets/Buttons/Cross (1).png" PointerEntered="exitImage_PointerEntered" PointerExited="exitImage_PointerExited" PointerPressed="exitImage_PointerPressed"></Image>
         </Button>
+
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="Helpbtn" Grid.Row="0" Grid.Column="0" Background="Transparent" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Image x:Name="HelpImage"  Source="/Assets/Buttons/Help (3).png" PointerEntered="HelpImage_PointerEntered" PointerExited="HelpImage_PointerExited" PointerPressed="HelpImage_PointerPressed"></Image>
+        </Button>
+            
         <Button Style="{StaticResource MyButtonStyle}" x:Name="bthPlay" Grid.Row="0" Grid.Column="9" Background="Transparent" Grid.ColumnSpan="2" Grid.RowSpan="15">
             <Image x:Name ="playImage" Source="/Assets/Buttons/Play (1).png" PointerEntered="playImage_PointerEntered" PointerExited="playImage_PointerExited" PointerPressed="playImage_PointerPressed"></Image>
         </Button>
