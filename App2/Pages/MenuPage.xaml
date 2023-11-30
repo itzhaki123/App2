@@ -166,11 +166,7 @@
             HorizontalAlignment="Center" FontSize="40" FontStyle="Oblique"
                 FontFamily="David" FontWeight="Bold" Foreground="Black"></TextBlock>
             </Viewbox>
-            <Button Style="{StaticResource MyButtonStyle}" x:Name="btnLeftMusic" Grid.Column="15" 
-        Grid.ColumnSpan="3" Grid.RowSpan="3" Background="Transparent">
-                <Image x:Name="leftMusicImage" Source="/Assets/Buttons/Cross (2).png" PointerEntered="leftMusicImage_PointerEntered"
-        PointerExited="leftMusicImage_PointerExited" PointerPressed="leftMusicImage_PointerPressed"></Image>
-            </Button>
+            
             <Button Style="{StaticResource MyButtonStyle}" x:Name="btnApplyMusic" Grid.Column="8" Grid.Row="7"
                 Grid.ColumnSpan="3" Grid.RowSpan="3" Background="Transparent">
                 <Image x:Name="ApplyMusicImage" Source="/Assets/Buttons/Check (4).png" PointerEntered="ApplyMusicImage_PointerEntered"

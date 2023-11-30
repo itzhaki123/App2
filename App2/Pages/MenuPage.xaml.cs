@@ -142,22 +142,12 @@ namespace App2
 
         }
 
-        private void leftMusicImage_PointerExited(object sender, PointerRoutedEventArgs e)
-        {
-            leftMusicImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/Buttons/Cross (2).png"));
-            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
-        }
 
         private void leftMusicImage_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             MusicGrid.Visibility = Visibility.Collapsed;
         }
 
-        private void leftMusicImage_PointerEntered(object sender, PointerRoutedEventArgs e)
-        {
-            leftMusicImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/Buttons/Cross (1).png"));
-            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
-        }
 
         private void ApplyMusicImage_PointerExited(object sender, PointerRoutedEventArgs e)
         {
