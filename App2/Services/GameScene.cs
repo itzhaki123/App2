@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace App2.Services
 {
-    internal class GameService:Scene
+    internal class GameScene:Scene
     {
+
     }
 }

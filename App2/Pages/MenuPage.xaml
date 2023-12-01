@@ -77,8 +77,8 @@
         </Button>
 
 
-        <Grid x:Name="popupGrid" Background="LightYellow" Opacity="1" Grid.Column="3" Grid.ColumnSpan="8" 
-              Grid.Row="4" Grid.RowSpan="7" BorderBrush="White" CornerRadius="10" BorderThickness="6" Visibility="Collapsed">
+        <Grid x:Name="popupGrid" Background="LightYellow" Opacity="1" Grid.Column="6" Grid.ColumnSpan="8" 
+              Grid.Row="4" Grid.RowSpan="7" BorderBrush="Black" CornerRadius="10" BorderThickness="6" Visibility="Collapsed">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
