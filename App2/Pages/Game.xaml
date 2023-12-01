@@ -5,6 +5,7 @@
     xmlns:local="using:App2.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:GameServices="using:App2.Services"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -46,12 +47,17 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
+            
 
         </Grid.ColumnDefinitions>
+        <Border Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="12" Grid.RowSpan="14" BorderBrush="Black" BorderThickness="5" CornerRadius="20">
+            <GameServices:GameScene x:Name="scene" Background="Transparent"></GameServices:GameScene>
+        </Border>
 
         <Button Style="{StaticResource MyButtonStyle}" x:Name="bthExit" Grid.Row="0" Grid.Column="13" Grid.ColumnSpan="1" Grid.RowSpan="2" Background="Transparent">
             <Image x:Name="exitImage" Source="/Assets/Buttons/Cross (1).png" PointerEntered="exitImage_PointerEntered" PointerExited="exitImage_PointerExited" PointerPressed="exitImage_PointerPressed"></Image>
         </Button>
+        
     </Grid>
     
 </Page>

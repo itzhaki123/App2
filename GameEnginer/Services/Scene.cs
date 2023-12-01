@@ -9,6 +9,6 @@ namespace GameEnginer.Services
 {
    public abstract class Scene:Canvas
     {
-        //kl0ikiji9ji9ju9ju8u8jm,
+        
     }
 }
