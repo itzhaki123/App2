@@ -57,7 +57,16 @@
         <Button Style="{StaticResource MyButtonStyle}" x:Name="bthExit" Grid.Row="0" Grid.Column="13" Grid.ColumnSpan="1" Grid.RowSpan="2" Background="Transparent">
             <Image x:Name="exitImage" Source="/Assets/Buttons/Cross (1).png" PointerEntered="exitImage_PointerEntered" PointerExited="exitImage_PointerExited" PointerPressed="exitImage_PointerPressed"></Image>
         </Button>
-        
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="Heartbtn1" Grid.Row="0" Grid.Column="0" Background="Transparent" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Image x:Name="HeartImage1"  Source="/Assets/Buttons/Heart.png"></Image>
+        </Button>
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="Heartbtn2" Grid.Row="0" Grid.Column="1" Background="Transparent" Grid.ColumnSpan="5" Grid.RowSpan="2">
+            <Image x:Name="HeartImage2"  Source="/Assets/Buttons/Heart.png"></Image>
+        </Button>
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="Heartbtn3" Grid.Row="0" Grid.Column="2" Background="Transparent" Grid.ColumnSpan="4" Grid.RowSpan="2">
+            <Image x:Name="HeartImage3"  Source="/Assets/Buttons/Heart.png"></Image>
+        </Button>
+
     </Grid>
     
 </Page>

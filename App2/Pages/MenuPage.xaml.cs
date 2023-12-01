@@ -140,7 +140,7 @@ namespace App2
 
         private void volumeSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
         {
-
+            MusicPlayer.Volume = e.NewValue;
         }
 
         private void ApplyMusicImage_PointerExited(object sender, PointerRoutedEventArgs e)

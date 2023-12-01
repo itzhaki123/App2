@@ -188,7 +188,7 @@
             </ToggleSwitch>
 
             <Slider x:Name="volumeSlider" Maximum="100" Grid.Column="3" Grid.Row="6" Grid.ColumnSpan="11" Grid.RowSpan="2" Header="Volume" IsTextScaleFactorEnabled="True"
-            FontSize="40" FontWeight="Bold" FontFamily="Bradley Hand ITC" ValueChanged="volumeSlider_ValueChanged">
+            FontSize="40" FontWeight="Bold" FontFamily="David" ValueChanged="volumeSlider_ValueChanged">
             </Slider>
         </Grid>
         
