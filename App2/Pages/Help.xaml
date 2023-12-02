@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets/Background/forest.jpg"></ImageBrush>
+            <ImageBrush ImageSource="/Assets/Background/Dino.jpg"></ImageBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -47,7 +47,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Grid Background="LightYellow" Opacity="0.8" Grid.Column="4" Grid.ColumnSpan="6"
+        <Grid Background="LightSlateGray" Opacity="0.8" Grid.Column="4" Grid.ColumnSpan="6"
               Grid.Row="1" Grid.RowSpan="7" BorderBrush="Black" CornerRadius="10" BorderThickness="6">
             <ScrollViewer>
                 <TextBlock TextWrapping="Wrap" FontSize="50" FontFamily="David">

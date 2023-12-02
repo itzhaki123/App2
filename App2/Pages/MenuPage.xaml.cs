@@ -29,6 +29,7 @@ namespace App2
         {
             this.InitializeComponent();
             if (MusicPlayer.IsOn) backgroundMusicSw.IsOn = true; else backgroundMusicSw.IsOn = false;
+            volumeSlider.Value = 100;
         }
         private void exitImage_PointerEntered(object sender, PointerRoutedEventArgs e)
         {

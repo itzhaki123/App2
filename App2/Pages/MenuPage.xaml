@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets/Background/forest.jpg"></ImageBrush>
+            <ImageBrush ImageSource="/Assets/Background/Dino.jpg"></ImageBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -77,7 +77,7 @@
         </Button>
 
 
-        <Grid x:Name="popupGrid" Background="LightYellow" Opacity="1" Grid.Column="6" Grid.ColumnSpan="8" 
+        <Grid x:Name="popupGrid" Background="LightSlateGray" Opacity="1" Grid.Column="6" Grid.ColumnSpan="8" 
               Grid.Row="4" Grid.RowSpan="7" BorderBrush="Black" CornerRadius="10" BorderThickness="6" Visibility="Collapsed">
 
             <Grid.RowDefinitions>
@@ -131,8 +131,8 @@
             </Button>
             
         </Grid>
-        <Grid x:Name="MusicGrid" Background="LightYellow" Opacity="1" Grid.Column="7" Grid.ColumnSpan="10"
-    Grid.Row="4" Grid.RowSpan="10" BorderBrush="Black" BorderThickness="6"
+        <Grid x:Name="MusicGrid" Background="LightSlateGray" Opacity="1" Grid.Column="5" Grid.ColumnSpan="10"
+    Grid.Row="3" Grid.RowSpan="10" BorderBrush="Black" BorderThickness="6"
         CornerRadius="15" Visibility="Collapsed">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -172,7 +172,7 @@
                 FontFamily="David" FontWeight="Bold" Foreground="Black"></TextBlock>
             </Viewbox>
             
-            <Button Style="{StaticResource MyButtonStyle}" x:Name="btnApplyMusic" Grid.Column="8" Grid.Row="7"
+            <Button Style="{StaticResource MyButtonStyle}" x:Name="btnApplyMusic" Grid.Column="7" Grid.Row="7"
                 Grid.ColumnSpan="3" Grid.RowSpan="3" Background="Transparent">
                 <Image x:Name="ApplyMusicImage" Source="/Assets/Buttons/Check (4).png" PointerEntered="ApplyMusicImage_PointerEntered"
                 PointerExited="ApplyMusicImage_PointerExited" PointerPressed="ApplyMusicImage_PointerPressed"></Image>

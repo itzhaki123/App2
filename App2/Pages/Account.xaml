@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets/Background/forest.jpg"></ImageBrush>
+            <ImageBrush ImageSource="/Assets/Background/Dino.jpg"></ImageBrush>
         </Grid.Background>
 
         <Grid.RowDefinitions>
@@ -59,7 +59,7 @@
 
         </Grid.ColumnDefinitions>
 
-        <Grid x:Name="registerGrid" Background="LightYellow" Opacity="0.8" Grid.Column="7" Grid.ColumnSpan="10"
+        <Grid x:Name="registerGrid" Background="LightSlateGray" Opacity="0.8" Grid.Column="7" Grid.ColumnSpan="10"
               Grid.Row="3" Grid.RowSpan="10" BorderBrush="Black" CornerRadius="10" BorderThickness="6" Visibility="Visible">
 
             <Grid.RowDefinitions>
@@ -121,7 +121,7 @@
             </Button>
         </Grid>
 
-        <Grid x:Name="loginGrid" Background="LightYellow" Opacity="0.8" Grid.Column="7" Grid.ColumnSpan="10"
+        <Grid x:Name="loginGrid" Background="LightSlateGray" Opacity="0.8" Grid.Column="7" Grid.ColumnSpan="10"
               Grid.Row="3" Grid.RowSpan="10" BorderBrush="Black" CornerRadius="10" BorderThickness="6" Visibility="Collapsed">
 
             <Grid.RowDefinitions>
@@ -175,7 +175,7 @@
                 <Image x:Name="PopUpEnterBtnImage" Source="/Assets/Buttons/Check(4).png"></Image>
             </Button>
             <Button Style="{StaticResource MyButtonStyle}" x:Name="btnApply" Grid.Column="8" Grid.Row="7"
-     Grid.ColumnSpan="3" Grid.RowSpan="3" Background="Transparent">
+     Grid.ColumnSpan="4" Grid.RowSpan="5" Background="Transparent">
                 <Image x:Name="ApplySign" Source="/Assets/Buttons/Check (4).png" PointerEntered="ApplySign_PointerEntered" PointerExited="ApplySign_PointerExited" PointerPressed="ApplySign_PointerPressed"></Image>
             </Button>
         </Grid>

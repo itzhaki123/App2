@@ -76,7 +76,7 @@ namespace App2
 
         /// <summary>
         /// Invoked when Navigation to a certain page fails
-        /// </summary>
+        /// </summary>b 
         /// <param name="sender">The Frame which failed navigation</param>
         /// <param name="e">Details about the navigation failure</param>
         void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
