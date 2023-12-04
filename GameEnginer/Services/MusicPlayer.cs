@@ -13,7 +13,6 @@ namespace GameEngine.Services
 
         public static bool IsOn { get; set; } = false;
         private static double _volume = 0.5;
-
         public static double Volume
         {
             set
