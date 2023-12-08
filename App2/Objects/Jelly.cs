@@ -38,7 +38,7 @@ namespace App2.Objects
                     base.SetImage("Jelly//jelly_green.png");
                     break;
                 case JellyType.Pink:
-                    base.SetImage("Jelly//jelly_pink.png");
+                    base.SetImage("Jelly//jelly_pink.png"); 
                     break;
                 case JellyType.Yellow:
                     base.SetImage("Jelly//jelly_yellow.png");
