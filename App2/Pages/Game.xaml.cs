@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App2.Services;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,6 +24,9 @@ namespace App2.Pages
     /// </summary>
     public sealed partial class Game : Page
     {
+        private GameManager _gameManager;
+
+
         public Game()
         {
             this.InitializeComponent();
@@ -43,6 +47,11 @@ namespace App2.Pages
         private void exitImage_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             Frame.Navigate(typeof(MenuPage));
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            _gameManager = new GameManager(scene);
         }
     }
 }

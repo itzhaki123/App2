@@ -9,7 +9,7 @@ namespace App2.Services
 {
     public class GameScene:Scene
     {
-
+         
     }
 }
             
