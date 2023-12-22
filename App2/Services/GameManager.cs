@@ -4,18 +4,18 @@ using System;
 
 namespace App2.Services
 {
-    public class GameManager:Manager
+    public class GameManager : Manager
     {
-        public GameManager(Scene scene): base(scene)
+        public GameManager(Scene scene) : base(scene)
         {
-            scene.Ground = scene.ActualHeight - 40; 
+            scene.Ground = scene.ActualHeight - 40;
             Init();
         }
 
         private void Init()
         {
-            Random rnd = new Random(); 
-        
+            Random rnd = new Random();
+
             int PlaceX = 50;
             int PlaceX2 = 50;
             int PlaceX3 = 50;
@@ -40,4 +40,3 @@ namespace App2.Services
         }
     }
 }
-     

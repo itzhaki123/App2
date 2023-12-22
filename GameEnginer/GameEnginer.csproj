@@ -124,6 +124,7 @@
     <Compile Include="Objects\GameObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Constants.cs" />
+    <Compile Include="Services\GameEvents.cs" />
     <Compile Include="Services\Manager.cs" />
     <Compile Include="Services\MusicPlayer.cs" />
     <Compile Include="Services\Scene.cs" />
