@@ -14,7 +14,7 @@ namespace App2.Services
 
         private void Init()
         {
-            Random rnd = new Random();
+            Random rnd = new Random(); 
         
             int PlaceX = 50;
             int PlaceX2 = 50;
