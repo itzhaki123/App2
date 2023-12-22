@@ -11,4 +11,4 @@ namespace GameEnginer.Services
         public Action OnRun; //מי שירשם לאירוע יוכל לזוז
 
     }
-}
+} 
