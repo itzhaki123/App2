@@ -8,7 +8,7 @@ namespace App2.Services
     {
         public GameManager(Scene scene): base(scene)
         {
-            scene.Ground = scene.ActualHeight - 40;
+            scene.Ground = scene.ActualHeight - 40; 
             Init();
         }
 
