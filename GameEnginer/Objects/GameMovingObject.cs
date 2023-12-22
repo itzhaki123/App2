@@ -40,5 +40,21 @@ namespace GameEnginer.Objects
         {
             _dX = _dY = _ddX = _ddY = 0;
         }
+        public void MoveTo(double toX, double toY, double speed = 1, double acceleration = 0)
+        {
+            _toX = toX;
+            _toY = toY;
+
+            var len = Math.Sqrt(Math.Pow(_toX - _X, 2) + Math.Pow(_toY - _Y, 2));
+            var cos = (_toX - _X) / len;
+            var sin = (_toY - _Y) / len;
+
+            speed *= Constants.SpeedUnit;
+            _dX = speed * cos;
+            _dY = speed * sin;
+
+            _ddX = acceleration * cos;
+            //_ddY = acceleration * sin;
+        }
     }
 }

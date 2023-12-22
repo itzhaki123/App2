@@ -8,7 +8,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace GameEnginer.Services
 {
-   public abstract class Scene:Canvas
+    public abstract class Scene : Canvas
     {
         /// <summary>
         /// הפעולה מחזיקה במאגר כל האובייקטים
@@ -18,10 +18,23 @@ namespace GameEnginer.Services
         /// </summary>
         private List<GameObject> _gameObjects = new List<GameObject>();//מאגר האובייקטים במשחק 
 
-        public double Ground { get; set;}//רצפה
+        public double Ground { get; set; }//רצפה
 
         public Scene()
-        { }
+        {
+            Manager.Events.OnRun += Run;
+        }
+
+        private void Run()
+        {
+            foreach (var gameObject in _gameObjects)
+            {
+                if (gameObject is GameMovingObject movObj)
+                {
+                    movObj.Render();
+                }
+            }
+        }
 
         public void Init() //פעולה מחזירה אובייקטים למיקום התחלתי
         {
@@ -30,10 +43,10 @@ namespace GameEnginer.Services
                 obj.Init();
             }
         }
-        
+
         public void RemoveObject(GameObject gameObject)
         {
-            if(_gameObjects.Contains(gameObject))
+            if (_gameObjects.Contains(gameObject))
             {
                 _gameObjects.Remove(gameObject);
                 Children.Remove(gameObject.Image);
@@ -42,7 +55,7 @@ namespace GameEnginer.Services
 
         public void RemoveAllObjects()//פעולה מוחקת את כל האובייקטים
         {
-            foreach(GameObject gameObject in _gameObjects)
+            foreach (GameObject gameObject in _gameObjects)
             {
                 RemoveObject(gameObject);
             }

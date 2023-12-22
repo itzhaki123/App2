@@ -8,6 +8,9 @@ namespace GameEnginer.Services
 {
     public static class Constants
     {
+        public static double SpeedUnit = 10;//הגברת המהירות
+
+
         public enum GameState //הגדרת מצב משחק
         {
             Loaded,
@@ -15,5 +18,6 @@ namespace GameEnginer.Services
             Paused,
             GameOver
         }
+
     }
 }

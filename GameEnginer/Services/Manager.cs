@@ -19,7 +19,7 @@ namespace GameEnginer.Services
     {
         public Scene Scene { get; private set; }//במה
         private DispatcherTimer _runTimer; //טיימר שידליק אירוע onRun 
-        public GameEvents Events { get; private set; } = new GameEvents();//חבילת אירועים שניתן לגשת אליה מכל מקום
+        public static GameEvents Events { get; private set; } = new GameEvents();//חבילת אירועים שניתן לגשת אליה מכל מקום
         public static GameState GameState { get; set; } = GameState.Loaded;
 
         public Manager(Scene scene)
