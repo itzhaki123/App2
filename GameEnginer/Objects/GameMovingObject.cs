@@ -18,7 +18,6 @@ namespace GameEnginer.Objects
 
         protected GameMovingObject(Scene scene, string fileName, double placeX, double placeY) : base(scene, fileName, placeX, placeY)
         {
-
         }
         public override void Render()
         {

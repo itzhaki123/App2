@@ -17,7 +17,7 @@ namespace GameEnginer.Objects
 
         public Image Image { get; set; }
 
-        private Scene _scene;
+        protected Scene _scene;
         protected string _fileName;
 
         public double Width => Image.ActualWidth;

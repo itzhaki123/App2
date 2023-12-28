@@ -30,9 +30,9 @@ namespace App2.Objects
                 _X = 0;
                 Stop();
             }
-            else if (_X >= scene?.ActualWidth - Width)
+            else if (_X >= _scene?.ActualWidth - Width)
             {
-                _X = scene.ActualWidth - Width;
+                _X = _scene.ActualWidth - Width;
                 Stop();
             }
         }
