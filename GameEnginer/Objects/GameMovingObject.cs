@@ -34,27 +34,32 @@ namespace GameEnginer.Objects
                 _X = _toX;
                 _Y = _toY;
             }
-            base.Render();
+            base.Render(); //מצייר את הגוף כל פעם
         }
         public virtual void Stop()
         {
             _dX = _dY = _ddX = _ddY = 0;
         }
+        /// <summary>
+        /// מחשבת מרחק בין 2 נקודות 
+        /// </summary>
+        /// <param name="toX"></param>
+        /// <param name="toY"></param>
+        /// <param name="speed"></param>
+        /// <param name="acceleration"></param>
         public void MoveTo(double toX, double toY, double speed = 1, double acceleration = 0)
         {
             _toX = toX;
             _toY = toY;
 
-            var len = Math.Sqrt(Math.Pow(_toX - _X, 2) + Math.Pow(_toY - _Y, 2));
+            var len = Math.Sqrt(Math.Pow(_toX - _X, 2) + Math.Pow(_toY - _Y, 2)); //בודק אם העצם הגיע לנקודה שבה הוא אמור להפגש
             var cos = (_toX - _X) / len;
             var sin = (_toY - _Y) / len;
 
-            speed *= Constants.SpeedUnit;
+            speed *= Constants.SpeedUnit; //הגברת מהירות
             _dX = speed * cos;
             _dY = speed * sin;
-
             _ddX = acceleration * cos;
-            //_ddY = acceleration * sin;
-        }
-    }
+            _ddY = acceleration * sin;
+       }    }
 }

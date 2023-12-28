@@ -29,8 +29,20 @@ namespace GameEnginer.Services
             _runTimer.Interval = TimeSpan.FromMilliseconds(1);
             _runTimer.Start();
             _runTimer.Tick += _runTimer_Tick;
+            Window.Current.CoreWindow.KeyDown += CoreWindow_KeyDown;
+            Window.Current.CoreWindow.KeyUp += CoreWindow_KeyUp;
         }
-        
+
+        private void CoreWindow_KeyUp(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.KeyEventArgs args)
+        {
+            
+        }
+
+        private void CoreWindow_KeyDown(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.KeyEventArgs args)
+        {
+            
+        }
+
         private void _runTimer_Tick(object sender, object e)
         {
             if(Events.OnRun!=null) //כך מדליקים את האירוע והאו יתרחש 1000 פעמים בשנייה
