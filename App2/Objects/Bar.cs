@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace App2.Objects
 {
-    class Bar: GameMovingObject
+    class Bar
     {
 
     }
 }
-  
