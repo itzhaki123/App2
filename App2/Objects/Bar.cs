@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.System;
 
 namespace App2.Objects
 {
@@ -19,8 +20,31 @@ namespace App2.Objects
             Image.Height = 20;
             Image.Width = width;
             Image.Stretch = Windows.UI.Xaml.Media.Stretch.Fill; //מותחים את מראה המחבט
-            
+            Manager.Events.OnKeyDown += KeyDown; //מחבט נרשם לאירוע ויוכל להגיב
+            Manager.Events.OnKeyUp += KeyUp;
+
         }
+
+        private void KeyUp(VirtualKey Key)
+        {
+            if(Key == VirtualKey.Left || Key == VirtualKey.Right)
+            {
+                Stop();
+            }
+        }
+
+        private void KeyDown(VirtualKey Key)
+        {
+            if(Key==VirtualKey.Left)
+            {
+                MoveTo(double.MinValue, _Y);
+            }
+            else if(Key==VirtualKey.Right)
+            {
+                MoveTo(double.MaxValue, _Y);
+            }
+        }
+
         public override void Render()
         {
             base.Render();

@@ -35,17 +35,23 @@ namespace GameEnginer.Services
 
         private void CoreWindow_KeyUp(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.KeyEventArgs args)
         {
-            
+            if (Events.OnKeyUp != null)
+            {
+                Events.OnKeyUp(args.VirtualKey);//כך הופעל האירוע שנעזוב את המקש
+            }
         }
 
         private void CoreWindow_KeyDown(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.KeyEventArgs args)
         {
-            
+            if(Events.OnKeyDown!=null)
+            {
+                Events.OnKeyDown(args.VirtualKey);//כך הופעל האירוע שנלחץ  על המקש
+            }
         }
 
         private void _runTimer_Tick(object sender, object e)
         {
-            if(Events.OnRun!=null) //כך מדליקים את האירוע והאו יתרחש 1000 פעמים בשנייה
+            if(Events.OnRun!=null) //כך מדליקים את האירוע והוא יתרחש 1000 פעמים בשנייה
             {
                 Events.OnRun();
             }
