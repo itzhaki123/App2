@@ -199,6 +199,7 @@
     <Content Include="Assets\Background\Dino.jpg" />
     <Content Include="Assets\Background\forest.jpg" />
     <Content Include="Assets\Background\NIR.jpg" />
+    <Content Include="Assets\Ball\Ball.png" />
     <Content Include="Assets\Bar\Bar.png" />
     <Content Include="Assets\Buttons\Check %284%29.png" />
     <Content Include="Assets\Buttons\Cross %281%29.png" />

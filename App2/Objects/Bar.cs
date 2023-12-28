@@ -37,11 +37,11 @@ namespace App2.Objects
         {
             if(Key==VirtualKey.Left)
             {
-                MoveTo(double.MinValue, _Y);
+                MoveTo(int.MinValue, _Y);
             }
             else if(Key==VirtualKey.Right)
             {
-                MoveTo(double.MaxValue, _Y);
+                MoveTo(int.MaxValue, _Y);
             }
         }
 
