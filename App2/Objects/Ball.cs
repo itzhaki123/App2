@@ -19,7 +19,7 @@ namespace App2.Objects
             _countlifes = 3;
             _speed = speed;
             Image.Width = width;
-            Image.Height = Height;
+            Image.Height = width;
             Init();
         }
         public override void Init()
