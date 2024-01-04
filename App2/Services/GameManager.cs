@@ -15,10 +15,10 @@ namespace App2.Services
         private void Init()
         {
             CreateJelliesFeild();
-            var Bar = new Bar(Scene, "Bar/Bar.png", 6, 100, Scene.ActualWidth / 2 - 50, Scene.Ground);
+            var Bar = new Bar(Scene, "Bar/Bar.png",1 , 100, Scene.ActualWidth / 2 - 50, Scene.Ground);
             Scene.AddObject(Bar);
 
-            var ball = new Ball(Scene, "Ball/Ball.png", 3, 35, Scene.ActualWidth / 2 - 17.5, Bar.Rect.Top - 35);
+            var ball = new Ball(Scene, "Ball/Ball.png", 1, 35, Scene.ActualWidth / 2 - 17.5, Bar.Rect.Top - 35);
             Scene.AddObject(ball);
            
         }
