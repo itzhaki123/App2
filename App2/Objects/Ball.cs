@@ -22,7 +22,7 @@ namespace App2.Objects
             Image.Height = width;
             Init();
         }
-        public override void Init()
+        public override void Init() 
         {
             Stop();
             Collisional = false;
