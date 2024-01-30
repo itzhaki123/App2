@@ -196,9 +196,8 @@
     <Content Include="Assets\App\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\App\Wide310x150Logo.scale-400.png" />
     <Content Include="Assets\Background\ChromeDino.jpg" />
-    <Content Include="Assets\Background\GoodLuck.png" />
     <Content Include="Assets\Background\NIR.jpg" />
-    <Content Include="Assets\Background\White.jpg" />
+    <Content Include="Assets\Background\WhiteTheme.jpg" />
     <Content Include="Assets\Buttons\Check %284%29.png" />
     <Content Include="Assets\Buttons\Cross %281%29.png" />
     <Content Include="Assets\Buttons\Cross %282%29.png" />

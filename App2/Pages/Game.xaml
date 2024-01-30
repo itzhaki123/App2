@@ -11,7 +11,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets/Background/White.jpg"></ImageBrush>
+            <ImageBrush ImageSource="/Assets/Background/WhiteTheme.jpg"></ImageBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
