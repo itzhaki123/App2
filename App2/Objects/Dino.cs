@@ -33,6 +33,7 @@ namespace App2.Objects
         {
             if(key == VirtualKey.Up)
             {
+                
                 _speed = 1;
                 Collisional = true;
                 Manager.Events.OnKeyDown -= KeyDown;
@@ -55,25 +56,18 @@ namespace App2.Objects
         }
         public override void Render()
         {
-            base.Render();//נגיעת כדור בשול שמאלי
-            if(_X <=0)
-            {
-                _dX = -_dX;
-                _X = 0;
-            }
-            else if(_Y <= 0) //נגיעת כדור בתקרה
+            base.Render();
+             _X = 50;
+
+            if(_Y <= 0) //נגיעת כדור בתקרה
             {
                 _dY = -_dY;
                 _Y = 0;
             }
-            if (Rect.Right >= _scene?.ActualWidth)//נגיעת הכדור בשול הימני
-            {
-                _dX = -_dX;
-                _X = _scene.ActualWidth - Width;
-            }
+
             if (Rect.Bottom >= _scene?.ActualHeight)//נגיעת הכדור בשול התחתון
             {
-                _dY = -_dY;
+                _dY = 0;
                 _Y = _scene.ActualHeight - Height;
             }
         }
