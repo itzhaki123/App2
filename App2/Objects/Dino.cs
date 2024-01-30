@@ -34,7 +34,6 @@ namespace App2.Objects
             if(key == VirtualKey.Up)
             {
                 
-                _speed = 1;
                 Collisional = true;
                 Manager.Events.OnKeyDown -= KeyDown;
                 Manager.Events.OnKeyUp -= KeyUp;
