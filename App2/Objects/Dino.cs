@@ -57,18 +57,18 @@ namespace App2.Objects
         public override void Render()
         {
             base.Render();
-             _X = 50;
-
-            if(_Y <= 0) //נגיעת כדור בתקרה
+             _X = 75;
+            if(_Y <= 400) //נגיעת כדור בתקרה
             {
                 _dY = -_dY;
-                _Y = 0;
             }
 
             if (Rect.Bottom >= _scene?.ActualHeight)//נגיעת הכדור בשול התחתון
             {
-                _dY = 0;
                 _Y = _scene.ActualHeight - Height;
+                Stop();
+                Manager.Events.OnKeyDown += KeyDown;
+                Manager.Events.OnKeyUp += KeyUp;
             }
         }
     }
