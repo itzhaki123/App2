@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets/Background/forest.jpg"></ImageBrush>
+            <ImageBrush ImageSource="/Assets/Background/ChromeDino.jpg"></ImageBrush>
         </Grid.Background>
         <Grid>
             <Grid.Background>

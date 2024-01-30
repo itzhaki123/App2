@@ -195,11 +195,10 @@
     <Content Include="Assets\App\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\App\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\App\Wide310x150Logo.scale-400.png" />
-    <Content Include="Assets\Background\Dino.jpg" />
-    <Content Include="Assets\Background\forest.jpg" />
+    <Content Include="Assets\Background\ChromeDino.jpg" />
+    <Content Include="Assets\Background\GoodLuck.png" />
     <Content Include="Assets\Background\NIR.jpg" />
-    <Content Include="Assets\Ball\Ball.png" />
-    <Content Include="Assets\Bar\Bar.png" />
+    <Content Include="Assets\Background\White.jpg" />
     <Content Include="Assets\Buttons\Check %284%29.png" />
     <Content Include="Assets\Buttons\Cross %281%29.png" />
     <Content Include="Assets\Buttons\Cross %282%29.png" />
@@ -226,9 +225,9 @@
     <Content Include="Assets\Digits\Digit3.png" />
     <Content Include="Assets\Digits\Digit4.png" />
     <Content Include="Assets\Digits\Digit1.png" />
-    <Content Include="Assets\Jelly\jelly_green.png" />
-    <Content Include="Assets\Jelly\jelly_pink.png" />
-    <Content Include="Assets\Jelly\jelly_yellow.png" />
+    <Content Include="Assets\Runner\dead.png" />
+    <Content Include="Assets\Runner\obstacle-1.gif" />
+    <Content Include="Assets\Runner\obstacle-2.gif" />
     <Content Include="Music\MixKit2.mp3" />
     <Content Include="Music\MixKit.mp3" />
     <Content Include="Assets\Runner\running.gif" />
@@ -271,7 +270,6 @@
       <Name>GameEnginer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
