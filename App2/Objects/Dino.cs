@@ -9,14 +9,12 @@ using Windows.System;
 
 namespace App2.Objects
 {
-    public class Ball:GameMovingObject
+    public class Dino:GameMovingObject
     {
-        private int _countlifes;
         private double _speed;
 
-        public Ball(Scene scene, string fileName, double speed, double width, double placeX, double placeY):base(scene, fileName, placeX, placeY)
+        public Dino(Scene scene, string fileName, double speed, double width, double placeX, double placeY):base(scene, fileName, placeX, placeY)
         {
-            _countlifes = 3;
             _speed = speed;
             Image.Width = width;
             Image.Height = width;
@@ -50,12 +48,6 @@ namespace App2.Objects
         {
             switch(key)
             {
-                case VirtualKey.Left:
-                    MoveTo(int.MinValue, _Y, _speed);
-                    break;
-                case VirtualKey.Right:
-                    MoveTo(int.MaxValue, _Y, _speed);
-                    break;
                 case VirtualKey.Up:
                     MoveTo(_X, int.MinValue, _speed);
                     break;

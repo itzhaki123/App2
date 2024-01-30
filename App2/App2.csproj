@@ -119,9 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Objects\Ball.cs" />
-    <Compile Include="Objects\Bar.cs" />
-    <Compile Include="Objects\Jelly.cs" />
+    <Compile Include="Objects\Dino.cs" />
     <Compile Include="Pages\Account.xaml.cs">
       <DependentUpon>Account.xaml</DependentUpon>
     </Compile>
@@ -233,6 +231,7 @@
     <Content Include="Assets\Jelly\jelly_yellow.png" />
     <Content Include="Music\MixKit2.mp3" />
     <Content Include="Music\MixKit.mp3" />
+    <Content Include="Assets\Runner\running.gif" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
