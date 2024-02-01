@@ -82,6 +82,14 @@ namespace App2.Objects
                     _scene.RemoveObject(this);
                 }
             }
+            else if (obj is Bird ob1)
+            {
+                var intersect = RectHelper.Intersect(Rect, ob1.Rect);
+                if (intersect != null)
+                {
+                    _scene.RemoveObject(this);
+                }
+            }
         }
     }
 }

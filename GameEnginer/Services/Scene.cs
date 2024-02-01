@@ -86,5 +86,6 @@ namespace GameEnginer.Services
             _gameObjects.Add(gameObject);
             Children.Add(gameObject.Image);
         }
+
     }
 }

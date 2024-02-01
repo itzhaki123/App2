@@ -17,7 +17,7 @@ namespace App2.Objects
             _speed = speed;
             Image.Width = width;
             Image.Height = width;
-            _dX = -10;
+            _dX = -8;
 
         }
 
