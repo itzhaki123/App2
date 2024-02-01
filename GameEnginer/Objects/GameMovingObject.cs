@@ -16,6 +16,7 @@ namespace GameEnginer.Objects
         protected double _toX;//מיקום היעד ציר אופקי
         protected double _toY;//מיקום היעד ציר אנכי
 
+
         protected GameMovingObject(Scene scene, string fileName, double placeX, double placeY) : base(scene, fileName, placeX, placeY)
         {
         }
@@ -46,6 +47,7 @@ namespace GameEnginer.Objects
         /// <param name="toY"></param>
         /// <param name="speed"></param>
         /// <param name="acceleration"></param>
+        /// 
         public void MoveTo(double toX, double toY, double speed = 1, double acceleration = 0)
         {
             _toX = toX;

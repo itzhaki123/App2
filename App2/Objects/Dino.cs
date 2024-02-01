@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.System;
+using Windows.UI.Xaml;
 
 namespace App2.Objects
 {
@@ -23,7 +24,7 @@ namespace App2.Objects
         public override void Init() 
         {
             Stop();
-            Collisional = false;
+            Collisional = true;
             base.Init();
             Manager.Events.OnKeyDown += KeyDown;
             Manager.Events.OnKeyUp += KeyUp;
@@ -57,7 +58,7 @@ namespace App2.Objects
         {
             base.Render();
              _X = 75;
-            if(_Y <= 400) //נגיעת כדור בתקרה
+            if(_Y <= 435) //גבול
             {
                 _dY = -_dY;
             }
@@ -68,6 +69,18 @@ namespace App2.Objects
                 Stop();
                 Manager.Events.OnKeyDown += KeyDown;
                 Manager.Events.OnKeyUp += KeyUp;
+            }
+        }
+        public override void Collide(GameObject obj)
+        {
+            base.Collide(obj);
+            if (obj is Obstacle2 ob2)
+            {
+                var intersect = RectHelper.Intersect(Rect, ob2.Rect);
+                if(intersect != null)
+                {
+                    _scene.RemoveObject(this);
+                }
             }
         }
     }

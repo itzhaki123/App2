@@ -13,5 +13,10 @@ namespace GameEnginer.Services
         public Action<VirtualKey> OnKeyDown; //האירוע שיתרחש אם המשתמש ילחץ על מקש כלשהו
         public Action<VirtualKey> OnKeyUp; //האירוע שיתרחש אם המשתמש יעזוב מקש כלשהו
 
+        internal void RemoveEvents()
+        {
+            OnKeyDown = null;
+            OnKeyUp = null;
+        }
     }
 } 

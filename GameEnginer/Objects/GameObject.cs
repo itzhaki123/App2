@@ -9,6 +9,7 @@ namespace GameEnginer.Objects
 {
     public abstract class GameObject
     {
+
         protected double _X; //מיקום נוכחי 
         protected double _Y; //מיקום נוכחי
 
@@ -70,6 +71,7 @@ namespace GameEnginer.Objects
         }
         public virtual void Collide(GameObject gameObject)
         {
+
         }
     }
 }

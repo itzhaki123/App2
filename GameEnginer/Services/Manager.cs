@@ -18,17 +18,18 @@ namespace GameEnginer.Services
     public abstract class Manager
     {
         public Scene Scene { get; private set; }//במה
-        private DispatcherTimer _runTimer; //טיימר שידליק אירוע onRun 
+        private static DispatcherTimer _runTimer = new DispatcherTimer();//ככה בונים טיימר; //טיימר שידליק אירוע onRun 
         public static GameEvents Events { get; private set; } = new GameEvents();//חבילת אירועים שניתן לגשת אליה מכל מקום
         public static GameState GameState { get; set; } = GameState.Loaded;
 
         public Manager(Scene scene)
         {
+            Events.RemoveEvents();
             Scene = scene;
-            _runTimer = new DispatcherTimer();//ככה בונים טיימר
             _runTimer.Interval = TimeSpan.FromMilliseconds(1);
-            _runTimer.Start();
             _runTimer.Tick += _runTimer_Tick;
+            _runTimer.Start();
+
             Window.Current.CoreWindow.KeyDown += CoreWindow_KeyDown;
             Window.Current.CoreWindow.KeyUp += CoreWindow_KeyUp;
         }

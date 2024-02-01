@@ -11,7 +11,7 @@
     <AssemblyName>App2</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.22621.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -119,7 +119,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Objects\Cloud.cs" />
     <Compile Include="Objects\Dino.cs" />
+    <Compile Include="Objects\Obstacle1.cs" />
+    <Compile Include="Objects\Obstacle2.cs" />
+    <Compile Include="Objects\Sun.cs" />
     <Compile Include="Pages\Account.xaml.cs">
       <DependentUpon>Account.xaml</DependentUpon>
     </Compile>
@@ -224,9 +228,11 @@
     <Content Include="Assets\Digits\Digit3.png" />
     <Content Include="Assets\Digits\Digit4.png" />
     <Content Include="Assets\Digits\Digit1.png" />
+    <Content Include="Assets\Runner\cloud.png" />
     <Content Include="Assets\Runner\dead.png" />
     <Content Include="Assets\Runner\obstacle-1.gif" />
     <Content Include="Assets\Runner\obstacle-2.gif" />
+    <Content Include="Assets\Runner\sun.png" />
     <Content Include="Music\MixKit2.mp3" />
     <Content Include="Music\MixKit.mp3" />
     <Content Include="Assets\Runner\running.gif" />
