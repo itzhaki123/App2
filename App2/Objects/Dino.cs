@@ -18,7 +18,6 @@ namespace App2.Objects
             Running, Bending, Dead
         }
         private StateType _state;
-
         private double _speed;
         public Dino(Scene scene, string fileName, double speed, double width, double placeX, double placeY):base(scene, fileName, placeX, placeY)
         {
@@ -97,7 +96,6 @@ namespace App2.Objects
             {
                 _Y = _scene.ActualHeight - Height;
                 Stop();
-                Manager.Events.OnKeyDown += Key;
             }
         }
         public override void Collide(GameObject obj)
@@ -111,8 +109,8 @@ namespace App2.Objects
                     _state = StateType.Dead;
                     SetImage();
                     Manager.Events.OnRun = null;
-                    
-
+                    Manager.Events.OnKeyDown -= Key;
+                    Manager.Events.OnKeyUp -= ReturnToRunState;
                 }
             }
             else if (obj is Bird ob1)
@@ -122,7 +120,6 @@ namespace App2.Objects
                 {
                     _state = StateType.Dead;
                     SetImage();
-                    
                     Manager.Events.OnRun = null;
                 }
             }

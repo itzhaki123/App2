@@ -29,7 +29,6 @@ namespace GameEnginer.Services
             _runTimer.Interval = TimeSpan.FromMilliseconds(1);
             _runTimer.Tick += _runTimer_Tick;
             _runTimer.Start();
-
             Window.Current.CoreWindow.KeyDown += CoreWindow_KeyDown;
             Window.Current.CoreWindow.KeyUp += CoreWindow_KeyUp;
         }
@@ -81,6 +80,12 @@ namespace GameEnginer.Services
                 return true;
             }
             return false;
+        }
+        public void Unsubscribe()
+        {
+            _runTimer.Tick -= _runTimer_Tick;
+            Window.Current.CoreWindow.KeyDown -= CoreWindow_KeyDown;
+            Window.Current.CoreWindow.KeyUp -= CoreWindow_KeyUp;
         }
 
     }

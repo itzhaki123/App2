@@ -1,4 +1,5 @@
 ﻿using App2.Services;
+using GameEnginer.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -52,6 +53,7 @@ namespace App2.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             _gameManager = new GameManager(scene);
+            Loaded -= Page_Loaded;
         }
     }
 }
