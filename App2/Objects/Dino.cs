@@ -101,7 +101,7 @@ namespace App2.Objects
             }
         }
         public override void Collide(GameObject obj)
-        {
+        { 
             base.Collide(obj);
             if (obj is Obstacle2 ob2)
             {
