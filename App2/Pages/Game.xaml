@@ -51,7 +51,7 @@
 
         </Grid.ColumnDefinitions>
         <Border Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="12" Grid.RowSpan="14" BorderBrush="Black" BorderThickness="5" CornerRadius="20">
-            <GameServices:GameScene x:Name="scene" Background="Transparent"></GameServices:GameScene>
+            <GameServices:GameScene x:Name="scene" Background="PapayaWhip"></GameServices:GameScene>
         </Border>
 
         <Button Style="{StaticResource MyButtonStyle}" x:Name="bthExit" Grid.Row="0" Grid.Column="13" Grid.ColumnSpan="1" Grid.RowSpan="2" Background="Transparent">

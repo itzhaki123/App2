@@ -10,6 +10,7 @@ namespace App2.Services
         {
             scene.Ground = scene.ActualHeight - 40;
             Init();
+
         }
 
         private void Init()
@@ -28,10 +29,8 @@ namespace App2.Services
             Scene.AddObject(cloud3);
             var sun1 = new Sun(Scene, "Runner/sun.png", 2, 100, Scene.ActualWidth-100, 0);
             Scene.AddObject(sun1);
-            //var bird1 = new Bird(Scene, "Runner/bird-enemy.gif", 150, 1000, 600);
-            //Scene.AddObject(bird1);
-
-            var dead = new Dino(Scene, "Runner/dead.png", 2, 90, 20, 700);
+            var bird1 = new Bird(Scene, "Runner/BirdEnemy.gif", 120, 1000, 500);
+            Scene.AddObject(bird1);
 
         }
     }

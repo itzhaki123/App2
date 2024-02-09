@@ -48,6 +48,7 @@ namespace App2.Pages
         private void exitImage_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             Frame.Navigate(typeof(MenuPage));
+            _gameManager.Unsubscribe();
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

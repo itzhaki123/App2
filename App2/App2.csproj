@@ -11,7 +11,7 @@
     <AssemblyName>App2</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.22621.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -229,6 +229,7 @@
     <Content Include="Assets\Digits\Digit3.png" />
     <Content Include="Assets\Digits\Digit4.png" />
     <Content Include="Assets\Digits\Digit1.png" />
+    <Content Include="Assets\Runner\BirdEnemy.gif" />
     <Content Include="Assets\Runner\bird-enemy.gif" />
     <Content Include="Assets\Runner\cloud.png" />
     <Content Include="Assets\Runner\dead.png" />

@@ -15,7 +15,7 @@ namespace App2.Objects
         {
             Image.Width = width;
             Image.Height = width;
-            _dX = -5;
+            _dX = -2;
         }
         public override void Render()
         {

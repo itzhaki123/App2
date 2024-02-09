@@ -56,7 +56,7 @@ namespace App2.Objects
                     base.SetImage("Runner/running.gif");
                     break;
                 case StateType.Bending:
-                    base.SetImage("Runner/DiBen.png");
+                    base.SetImage("Runner/DinoBending.png");
                     break;
                 case StateType.Dead:
                     base.SetImage("Runner/Dead.png");                    
@@ -79,7 +79,7 @@ namespace App2.Objects
                     break;
             }
             if(state!=_state)
-            {
+            { 
                 SetImage();
             }
             
@@ -90,6 +90,10 @@ namespace App2.Objects
             if(_Y <= 435) //גבול
             {
                 _dY = -_dY;
+            }
+            if(_state == StateType.Bending)
+            {
+                _Y = _scene.ActualHeight - Height;
             }
 
             if (Rect.Bottom >= _scene?.ActualHeight)//נגיעת הדינו בשול התחתון
@@ -121,6 +125,8 @@ namespace App2.Objects
                     _state = StateType.Dead;
                     SetImage();
                     Manager.Events.OnRun = null;
+                    Manager.Events.OnKeyDown -= Key;
+                    Manager.Events.OnKeyUp -= ReturnToRunState;
                 }
             }
         }

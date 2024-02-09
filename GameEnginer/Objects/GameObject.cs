@@ -64,6 +64,7 @@ namespace GameEnginer.Objects
         {
             Image.Source = new BitmapImage(new Uri($"ms-appx:///Assets/{fileName}"));
         }
+
         public virtual void Init()
         {
             _X = _placeX;
