@@ -50,7 +50,7 @@ namespace App2.Objects
 
         private void SetImage()
         {
-            switch(_state)
+            switch(_state) 
             {
                 case StateType.Running:
                     base.SetImage("Runner/running.gif");
