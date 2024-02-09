@@ -12,63 +12,92 @@ namespace App2.Objects
 {
     public class Dino:GameMovingObject
     {
-        private double _speed;
 
+        public enum StateType
+        {
+            Running, Bending, Dead
+        }
+        private StateType _state;
+
+        private double _speed;
         public Dino(Scene scene, string fileName, double speed, double width, double placeX, double placeY):base(scene, fileName, placeX, placeY)
         {
+            _state = StateType.Running;
             _speed = speed;
             Image.Width = width;
             Image.Height = width;
             Init();
+            SetImage();
         }
         public override void Init() 
         {
             Stop();
             Collisional = true;
             base.Init();
-            Manager.Events.OnKeyDown += KeyDown;
-            Manager.Events.OnKeyUp += KeyUp;
+            SetImage();
+            Manager.Events.OnKeyDown += Key;
+            Manager.Events.OnKeyUp += ReturnToRunState;
         }
 
-        private void KeyUp(VirtualKey key)
+        private void ReturnToRunState(VirtualKey key)
         {
-            if(key == VirtualKey.Up)
+            if(key== VirtualKey.Down)
             {
-                
-                Collisional = true;
-                Manager.Events.OnKeyDown -= KeyDown;
-                Manager.Events.OnKeyUp -= KeyUp;
+                _state = StateType.Running;
+                SetImage();
             }
-            else
+            
+        }
+
+        private void SetImage()
+        {
+            switch(_state)
             {
-                Stop();
+                case StateType.Running:
+                    base.SetImage("Runner/running.gif");
+                    break;
+                case StateType.Bending:
+                    base.SetImage("Runner/DiBen.png");
+                    break;
+                case StateType.Dead:
+                    base.SetImage("Runner/Dead.png");                    
+                    break;
             }
         }
 
-        private void KeyDown(VirtualKey key)
+
+        private void Key(VirtualKey key)
         {
-            switch(key)
+            var state = _state;
+            switch (key)
             {
                 case VirtualKey.Up:
                     MoveTo(_X, int.MinValue, _speed);
+                    _state = StateType.Running;
+                    break;
+                case VirtualKey.Down:
+                    _state = StateType.Bending;
                     break;
             }
+            if(state!=_state)
+            {
+                SetImage();
+            }
+            
         }
         public override void Render()
         {
             base.Render();
-             _X = 75;
             if(_Y <= 435) //גבול
             {
                 _dY = -_dY;
             }
 
-            if (Rect.Bottom >= _scene?.ActualHeight)//נגיעת הכדור בשול התחתון
+            if (Rect.Bottom >= _scene?.ActualHeight)//נגיעת הדינו בשול התחתון
             {
                 _Y = _scene.ActualHeight - Height;
                 Stop();
-                Manager.Events.OnKeyDown += KeyDown;
-                Manager.Events.OnKeyUp += KeyUp;
+                Manager.Events.OnKeyDown += Key;
             }
         }
         public override void Collide(GameObject obj)
@@ -79,7 +108,11 @@ namespace App2.Objects
                 var intersect = RectHelper.Intersect(Rect, ob2.Rect);
                 if(intersect != null)
                 {
-                    _scene.RemoveObject(this);
+                    _state = StateType.Dead;
+                    SetImage();
+                    Manager.Events.OnRun = null;
+                    
+
                 }
             }
             else if (obj is Bird ob1)
@@ -87,7 +120,10 @@ namespace App2.Objects
                 var intersect = RectHelper.Intersect(Rect, ob1.Rect);
                 if (intersect != null)
                 {
-                    _scene.RemoveObject(this);
+                    _state = StateType.Dead;
+                    SetImage();
+                    
+                    Manager.Events.OnRun = null;
                 }
             }
         }
