@@ -87,7 +87,7 @@ namespace App2.Objects
         public override void Render()
         {
             base.Render();
-            if(_Y <= 435) //גבול
+            if(_Y <= 440) //גבול
             {
                 _dY = -_dY;
             }
@@ -120,6 +120,18 @@ namespace App2.Objects
             else if (obj is Bird ob1)
             {
                 var intersect = RectHelper.Intersect(Rect, ob1.Rect);
+                if (intersect != null)
+                {
+                    _state = StateType.Dead;
+                    SetImage();
+                    Manager.Events.OnRun = null;
+                    Manager.Events.OnKeyDown -= Key;
+                    Manager.Events.OnKeyUp -= ReturnToRunState;
+                }
+            }
+            else if (obj is Obstacle1 ob3)
+            {
+                var intersect = RectHelper.Intersect(Rect, ob3.Rect);
                 if (intersect != null)
                 {
                     _state = StateType.Dead;

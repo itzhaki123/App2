@@ -10,22 +10,32 @@ namespace App2.Objects
 {
     class Obstacle2 : GameMovingObject
     {
-        private double _speed;
+        private Random random = new Random();
+        private int check;
 
         public Obstacle2(Scene scene, string fileName, double speed, int width, double placeX, double placeY) : base(scene, fileName, placeX, placeY)
         {
-            _speed = speed;
             Image.Width = width;
             Image.Height = width;
-            _dX = -8;
+            _dX = -7;
+            check = 0;
 
         }
-
+        public int GenerateRandomNumberInRange(int minValue, int maxValue)
+        {
+            // Generate a random number within the specified range
+            return random.Next(minValue, maxValue);
+        }
         public override void Render()
         {
+            check = GenerateRandomNumberInRange(1500, 2500);
             base.Render();
             if (_X < 0)
-                _X = _scene.ActualWidth;
+            {
+                _X = check;
+                _dX -= 2;
+            }
+            
         }
 
     }
