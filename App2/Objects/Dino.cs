@@ -71,7 +71,7 @@ namespace App2.Objects
             switch (key)
             {
                 case VirtualKey.Up:
-                    MoveTo(_X, int.MinValue, _speed);
+                    MoveTo(_X, 435, _speed);
                     _state = StateType.Running;
                     break;
                 case VirtualKey.Down:
@@ -87,18 +87,18 @@ namespace App2.Objects
         public override void Render()
         {
             base.Render();
-            if(_Y <= 440) //גבול
+            if(_Y <= 435) //גבול
             {
+                Manager.Events.OnKeyDown -= Key;
+                Manager.Events.OnKeyUp -= ReturnToRunState;
                 _dY = -_dY;
-            }
-            if(_state == StateType.Bending)
-            {
-                _Y = _scene.ActualHeight - Height;
             }
 
             if (Rect.Bottom >= _scene?.ActualHeight)//נגיעת הדינו בשול התחתון
             {
                 _Y = _scene.ActualHeight - Height;
+                Manager.Events.OnKeyDown += Key;
+                Manager.Events.OnKeyUp += ReturnToRunState;
                 Stop();
             }
         }

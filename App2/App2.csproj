@@ -237,6 +237,7 @@
     <Content Include="Assets\Runner\DinoBending.png" />
     <Content Include="Assets\Runner\obstacle-1.gif" />
     <Content Include="Assets\Runner\obstacle-2.gif" />
+    <Content Include="Assets\Runner\SheildDino.gif" />
     <Content Include="Assets\Runner\sun.png" />
     <Content Include="Music\MixKit2.mp3" />
     <Content Include="Music\MixKit.mp3" />
