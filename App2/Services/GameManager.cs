@@ -15,7 +15,7 @@ namespace App2.Services
 
         private void Init()
         {
-            var dino = new Dino(Scene, "Runner/running.gif", 2, 85, 20, 700);
+            var dino = new Dino(Scene, "Runner/running.gif", 2, 75, 20, 700);
             Scene.AddObject(dino);
 
             var obstacle2 = new Obstacle2(Scene, "Runner/obstacle-2.gif", 1, 50, 1000, 735);
