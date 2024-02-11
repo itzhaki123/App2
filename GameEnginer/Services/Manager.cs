@@ -96,7 +96,9 @@ namespace GameEnginer.Services
         }
         public void Unsubscribe()
         {
+            time = 0;
             _runTimer.Tick -= _runTimer_Tick;
+            _gameTimer.Tick -= _gameTimer_Tick;
             Window.Current.CoreWindow.KeyDown -= CoreWindow_KeyDown;
             Window.Current.CoreWindow.KeyUp -= CoreWindow_KeyUp;
         }

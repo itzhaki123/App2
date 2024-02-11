@@ -62,5 +62,6 @@ namespace App2.Pages
         {
             Timer.Text = time.ToString();
         }
+
     }
 }
