@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -55,6 +56,11 @@ namespace App2.Pages
         {
             _gameManager = new GameManager(scene);
             Loaded -= Page_Loaded;
+            Manager.Events.CountTime += UpdateTimer;
+        }
+        private void UpdateTimer(int time)
+        {
+            Timer.Text = time.ToString();
         }
     }
 }

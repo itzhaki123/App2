@@ -116,6 +116,7 @@ namespace App2.Objects
                     Manager.Events.OnRun = null;
                     Manager.Events.OnKeyDown -= Key;
                     Manager.Events.OnKeyUp -= ReturnToRunState;
+                    Manager.Events.CountTime = null;
                 }
             }
             else if (obj is Bird ob1)
@@ -128,6 +129,7 @@ namespace App2.Objects
                     Manager.Events.OnRun = null;
                     Manager.Events.OnKeyDown -= Key;
                     Manager.Events.OnKeyUp -= ReturnToRunState;
+                    Manager.Events.CountTime = null;
                 }
             }
             else if (obj is Obstacle1 ob3)
@@ -140,6 +142,7 @@ namespace App2.Objects
                     Manager.Events.OnRun = null;
                     Manager.Events.OnKeyDown -= Key;
                     Manager.Events.OnKeyUp -= ReturnToRunState;
+                    Manager.Events.CountTime = null;
                 }
             }
         }

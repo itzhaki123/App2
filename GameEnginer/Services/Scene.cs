@@ -29,6 +29,8 @@ namespace GameEnginer.Services
             Manager.Events.OnRun += CheckCollisional;
         }
 
+
+
         private void CheckCollisional()
         {
             foreach(var gameObject in _gameObjectsSnapshot) //עוברים על כל רשימת האוובייקטים

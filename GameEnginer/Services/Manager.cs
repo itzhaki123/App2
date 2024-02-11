@@ -19,8 +19,10 @@ namespace GameEnginer.Services
     {
         public Scene Scene { get; private set; }//במה
         private static DispatcherTimer _runTimer = new DispatcherTimer();//ככה בונים טיימר; //טיימר שידליק אירוע onRun 
+        private static DispatcherTimer _gameTimer = new DispatcherTimer();//ככה בונים טיימר; //טיימר שידליק אירוע onRun
         public static GameEvents Events { get; private set; } = new GameEvents();//חבילת אירועים שניתן לגשת אליה מכל מקום
         public static GameState GameState { get; set; } = GameState.Loaded;
+        static int time = 0;
 
         public Manager(Scene scene)
         {
@@ -31,6 +33,10 @@ namespace GameEnginer.Services
             _runTimer.Start();
             Window.Current.CoreWindow.KeyDown += CoreWindow_KeyDown;
             Window.Current.CoreWindow.KeyUp += CoreWindow_KeyUp;
+            _gameTimer = new DispatcherTimer();
+            _gameTimer.Interval = TimeSpan.FromMilliseconds(1);
+            _gameTimer.Start();
+            _gameTimer.Tick += _gameTimer_Tick;
         }
 
         private void CoreWindow_KeyUp(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.KeyEventArgs args)
@@ -54,6 +60,13 @@ namespace GameEnginer.Services
             if(Events.OnRun!=null) //כך מדליקים את האירוע והוא יתרחש 1000 פעמים בשנייה
             {
                 Events.OnRun();
+            }
+        }
+        private static void _gameTimer_Tick(object sender, object e)
+        {
+            if (Events.CountTime != null)
+            {
+                Events.CountTime(time += 1);
             }
         }
 

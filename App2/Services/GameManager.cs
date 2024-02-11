@@ -15,12 +15,12 @@ namespace App2.Services
 
         private void Init()
         {
-            var dino = new Dino(Scene, "Runner/running.gif", 2, 75, 20, 700);
+            var dino = new Dino(Scene, "Runner/running.gif", 2, 85, 20, 700);
             Scene.AddObject(dino);
 
-            var obstacle2 = new Obstacle2(Scene, "Runner/obstacle-2.gif", 1, 50, 1000, 735);
+            var obstacle2 = new Obstacle2(Scene, "Runner/obstacle-2.gif", 1, 50, 0, 735);
             Scene.AddObject(obstacle2);
-            var obstacle1 = new Obstacle1(Scene, "Runner/obstacle-1.gif", 1, 50, 0, 735);
+            var obstacle1 = new Obstacle1(Scene, "Runner/obstacle-1.gif", 1, 50, 1000, 735);
             Scene.AddObject(obstacle1);
 
             var cloud1 = new Cloud(Scene, "Runner/Cloud.png", 100, 1500, 200);
