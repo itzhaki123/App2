@@ -17,7 +17,7 @@ namespace App2.Objects
         {
             Image.Width = width;
             Image.Height = width;
-            _dX = -6;
+            _dX = -7;
             check = 0;
 
         }
@@ -28,7 +28,7 @@ namespace App2.Objects
         }
         public override void Render()
         {
-            check = GenerateRandomNumberInRange(3000, 4000);
+            check = GenerateRandomNumberInRange(3200, 4000);
             base.Render();
             if (_X < 0)
             {

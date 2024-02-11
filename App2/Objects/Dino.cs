@@ -70,6 +70,12 @@ namespace App2.Objects
             var state = _state;
             switch (key)
             {
+                case VirtualKey.Space:
+                    MoveTo(_X, 435, _speed);
+                    Manager.Events.OnKeyDown -= Key;//מבטל ספאם של לחיצות ומונע באג בדינו
+                    Manager.Events.OnKeyUp -= ReturnToRunState;
+                    _state = StateType.Running;
+                    break;
                 case VirtualKey.Up:
                     MoveTo(_X, 435, _speed);
                     Manager.Events.OnKeyDown -= Key;//מבטל ספאם של לחיצות ומונע באג בדינו
