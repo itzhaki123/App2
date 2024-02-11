@@ -64,6 +64,13 @@ namespace GameEnginer.Objects
         {
             Image.Source = new BitmapImage(new Uri($"ms-appx:///Assets/{fileName}"));
         }
+        public virtual void SetImage2(string fileName, int x)
+        {
+            Image.Source = new BitmapImage(new Uri($"ms-appx:///Assets/{fileName}"));
+            Image.Height = x;
+
+        }
+
 
         public virtual void Init()
         {

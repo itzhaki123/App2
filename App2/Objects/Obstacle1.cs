@@ -17,7 +17,7 @@ namespace App2.Objects
         {
             Image.Width = width;
             Image.Height = width;
-            _dX = -6;
+            _dX = -7;
             check = 0;
 
         }
@@ -33,7 +33,7 @@ namespace App2.Objects
             if (_X < 0)
             {
                 _X = check;
-                _dX -= 1;
+                _dX -= 1.5;
             }
 
         }
