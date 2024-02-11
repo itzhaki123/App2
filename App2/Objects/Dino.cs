@@ -72,6 +72,8 @@ namespace App2.Objects
             {
                 case VirtualKey.Up:
                     MoveTo(_X, 435, _speed);
+                    Manager.Events.OnKeyDown -= Key;
+                    Manager.Events.OnKeyUp -= ReturnToRunState;
                     _state = StateType.Running;
                     break;
                 case VirtualKey.Down:
@@ -89,8 +91,7 @@ namespace App2.Objects
             base.Render();
             if(_Y <= 435) //גבול
             {
-                Manager.Events.OnKeyDown -= Key;
-                Manager.Events.OnKeyUp -= ReturnToRunState;
+
                 _dY = -_dY;
             }
 
