@@ -72,7 +72,7 @@ namespace App2.Objects
             {
                 case VirtualKey.Up:
                     MoveTo(_X, 435, _speed);
-                    Manager.Events.OnKeyDown -= Key;
+                    Manager.Events.OnKeyDown -= Key;//מבטל ספאם של לחיצות ומונע באג בדינו
                     Manager.Events.OnKeyUp -= ReturnToRunState;
                     _state = StateType.Running;
                     break;
@@ -97,8 +97,8 @@ namespace App2.Objects
 
             if (Rect.Bottom >= _scene?.ActualHeight)//נגיעת הדינו בשול התחתון
             {
-                _Y = _scene.ActualHeight - Height;
-                Manager.Events.OnKeyDown += Key;
+                _Y = _scene.ActualHeight - Height;//החזרת הדינו למיקום התחלתי
+                Manager.Events.OnKeyDown += Key; //מבטל ספאם של לחיצות ומונע באג בדינו
                 Manager.Events.OnKeyUp += ReturnToRunState;
                 Stop();
             }
