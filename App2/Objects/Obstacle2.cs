@@ -28,12 +28,12 @@ namespace App2.Objects
         }
         public override void Render()
         {
-            check = GenerateRandomNumberInRange(1500, 2800);
+            check = GenerateRandomNumberInRange(1700, 2800);
             base.Render();
             if (_X < 0)
             {
                 _X = check;
-                _dX -= 1.1;
+                _dX -= 1;
             }
             
         }
