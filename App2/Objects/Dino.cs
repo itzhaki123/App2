@@ -85,7 +85,7 @@ namespace App2.Objects
                     }
                     else if (_Y <= _scene.ActualHeight-Height) //גבול
                     {
-                        _dY = 25;
+                        _dY = 27.5;
                     }
 
                     if (Rect.Bottom >= _scene?.ActualHeight)//נגיעת הדינו בשול התחתון
