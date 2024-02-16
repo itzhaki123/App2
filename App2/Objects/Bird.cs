@@ -19,7 +19,7 @@ namespace App2.Objects
         {
             Image.Width = width;
             Image.Height = width;
-            _dX = -10;
+            _dX = -13;
             check = 0;
         }
         public int GenerateRandomNumberInRange(int minValue, int maxValue)

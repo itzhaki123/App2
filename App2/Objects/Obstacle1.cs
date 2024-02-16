@@ -33,7 +33,7 @@ namespace App2.Objects
             if (_X < 0)
             {
                 _X = check;
-                _dX -= 2.3;
+                _dX -= 1.9;
             }
 
         }
