@@ -33,6 +33,8 @@ namespace App2.Services
             Scene.AddObject(sun1);
             var bird1 = new Bird(Scene, "Runner/BirdEnemy.gif", 120, 4500, 200);
             Scene.AddObject(bird1);
+            var bird2 = new Bird(Scene, "Runner/BirdEnemy.gif", 120, 7000, 300);
+            Scene.AddObject(bird2);
 
         }
     }
