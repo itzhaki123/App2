@@ -71,19 +71,28 @@ namespace App2.Objects
             switch (key)
             {
                 case VirtualKey.Space:
-                    MoveTo(_X, 435, _speed);
-                    Manager.Events.OnKeyDown -= Key;//מבטל ספאם של לחיצות ומונע באג בדינו
-                    Manager.Events.OnKeyUp -= ReturnToRunState;
-                    _state = StateType.Running;
-                    break;
                 case VirtualKey.Up:
-                    MoveTo(_X, 435, _speed);
-                    Manager.Events.OnKeyDown -= Key;//מבטל ספאם של לחיצות ומונע באג בדינו
-                    Manager.Events.OnKeyUp -= ReturnToRunState;
+                    //MoveTo(_X, 435, _speed);
+                    _dY = -28;
+                    _ddY = 1.75;
                     _state = StateType.Running;
                     break;
                 case VirtualKey.Down:
                     _state = StateType.Bending;
+                    if(_Y == _scene.ActualHeight - Height)
+                    {
+                        _state = StateType.Running;
+                    }
+                    else if (_Y <= _scene.ActualHeight-Height) //גבול
+                    {
+                        _dY = 25;
+                    }
+
+                    if (Rect.Bottom >= _scene?.ActualHeight)//נגיעת הדינו בשול התחתון
+                    {
+                        _Y = _scene.ActualHeight - Height;//החזרת הדינו למיקום התחלתי
+                        Stop();
+                    }
                     break;
             }
             if(state!=_state)
@@ -95,17 +104,14 @@ namespace App2.Objects
         public override void Render()
         {
             base.Render();
-            if(_Y <= 435) //גבול
+            if(_Y <= 450) //גבול
             {
-
                 _dY = -_dY;
             }
 
             if (Rect.Bottom >= _scene?.ActualHeight)//נגיעת הדינו בשול התחתון
             {
                 _Y = _scene.ActualHeight - Height;//החזרת הדינו למיקום התחלתי
-                Manager.Events.OnKeyDown += Key; //מבטל ספאם של לחיצות ומונע באג בדינו
-                Manager.Events.OnKeyUp += ReturnToRunState;
                 Stop();
             }
         }
