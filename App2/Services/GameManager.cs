@@ -31,7 +31,7 @@ namespace App2.Services
             Scene.AddObject(cloud3);
             var sun1 = new Sun(Scene, "Runner/sun.png", 2, 100, Scene.ActualWidth-100, 0);
             Scene.AddObject(sun1);
-            var bird1 = new Bird(Scene, "Runner/BirdEnemy.gif", 120, 4500, 200);
+            var bird1 = new Bird(Scene, "Runner/BirdEnemy.gif", 120, 8000, 200);
             Scene.AddObject(bird1);
             var bird2 = new Bird(Scene, "Runner/BirdEnemy.gif", 120, 7000, 300);
             Scene.AddObject(bird2);
