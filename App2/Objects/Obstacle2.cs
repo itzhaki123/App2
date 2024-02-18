@@ -34,7 +34,7 @@ namespace App2.Objects
                 _X = GenerateRandomNumberInRange(1700, 2800);
                 _dX -= 1.3;
                 check += 1;
-                if(check > 17)
+                if(check > 18)
                 {
                     _dX += 1.3;
                 }
