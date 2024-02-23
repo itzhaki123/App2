@@ -42,6 +42,8 @@ namespace App2.Objects
         {
             if(key== VirtualKey.Down)
             {
+                Image.Height = 85;
+                //_Y = _Y - 35;
                 _state = StateType.Running;
                 SetImage();
             }
@@ -72,25 +74,31 @@ namespace App2.Objects
             {
                 case VirtualKey.Space:
                 case VirtualKey.Up:
-                    //MoveTo(_X, 435, _speed);
-                    _dY = -28;
-                    _ddY = 1.75;
-                    _state = StateType.Running;
+                    if (_Y == _scene.ActualHeight-Height)
+                    {
+                        //MoveTo(_X, 435, _speed);
+                        _dY = -25;
+                        _ddY = 1.85;
+                        _state = StateType.Running;
+                    }
                     break;
                 case VirtualKey.Down:
                     _state = StateType.Bending;
                     if(_Y == _scene.ActualHeight - Height)
                     {
-                        _state = StateType.Running;
+                        Image.Height = 40;
+                        _state = StateType.Bending;
+                        _Y = _Y + 45;
                     }
                     else if (_Y <= _scene.ActualHeight-Height) //גבול
                     {
-                        _dY = 22.5;
+                        Image.Height = 40;
+                        _dY = 32.5;
                     }
 
                     if (Rect.Bottom >= _scene?.ActualHeight)//נגיעת הדינו בשול התחתון
                     {
-                        _Y = _scene.ActualHeight - Height;//החזרת הדינו למיקום התחלתי
+                        _Y = _scene.ActualHeight - Image.Height;//החזרת הדינו למיקום התחלתי
                         Stop();
                     }
                     break;
@@ -106,7 +114,7 @@ namespace App2.Objects
             base.Render();
             if(_Y <= 450) //גבול
             {
-                _dY = -_dY;
+                _dY =-_dY;
             }
 
             if (Rect.Bottom >= _scene?.ActualHeight)//נגיעת הדינו בשול התחתון
@@ -123,6 +131,8 @@ namespace App2.Objects
                 var intersect = RectHelper.Intersect(Rect, ob2.Rect);
                 if(intersect != null)
                 {
+                    Image.Height = 85;
+                    _Y = _Y + 45;
                     _state = StateType.Dead;
                     SetImage();
                     Manager.Events.OnRun = null;
@@ -136,6 +146,8 @@ namespace App2.Objects
                 var intersect = RectHelper.Intersect(Rect, ob1.Rect);
                 if (intersect != null)
                 {
+                    Image.Height = 85;
+                    _Y = _Y + 45;
                     _state = StateType.Dead;
                     SetImage();
                     Manager.Events.OnRun = null;
@@ -149,6 +161,8 @@ namespace App2.Objects
                 var intersect = RectHelper.Intersect(Rect, ob3.Rect);
                 if (intersect != null)
                 {
+                    Image.Height = 85;
+                    _Y = _Y + 45;
                     _state = StateType.Dead;
                     SetImage();
                     Manager.Events.OnRun = null;
