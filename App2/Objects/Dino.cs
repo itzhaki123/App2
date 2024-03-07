@@ -108,7 +108,7 @@ namespace App2.Objects
                 SetImage();
             }
             
-        }
+        } 
         public override void Render()
         {
             base.Render();
