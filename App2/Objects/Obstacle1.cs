@@ -41,5 +41,16 @@ namespace App2.Objects
             }
 
         }
+        public override void Collide(GameObject obj)
+        {
+            if (obj is Bullet bullet)
+            {
+                _scene.RemoveObject(this);
+                _scene.RemoveObject(bullet);
+                _X = GenerateRandomNumberInRange(3400, 4000);
+                _scene.AddObject(this);
+
+            }
+        }
     }
 }

@@ -10,7 +10,6 @@ namespace App2.Objects
 {
     class Cloud:GameMovingObject
     {
-
         public Cloud(Scene scene, string fileName, int width, double placeX, double placeY) : base(scene, fileName, placeX, placeY)
         {
             Image.Width = width;

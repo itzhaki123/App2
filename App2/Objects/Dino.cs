@@ -17,10 +17,13 @@ namespace App2.Objects
         {
             Running, Bending, Dead
         }
+        private Bullet bullet;
         private StateType _state;
         private double _speed;
+        private int check;
         public Dino(Scene scene, string fileName, double speed, double width, double placeX, double placeY):base(scene, fileName, placeX, placeY)
         {
+            check = 1;
             _state = StateType.Running;
             _speed = speed;
             Image.Width = width;
@@ -100,6 +103,14 @@ namespace App2.Objects
                     {
                         _Y = _scene.ActualHeight - Image.Height;//החזרת הדינו למיקום התחלתי
                         Stop();
+                    }
+                    break;
+                case VirtualKey.F:
+                    if(check <=3)
+                    {
+                        check++;
+                        bullet = new Bullet(scene, "Runner/Bullet.png", 40, _X, _Y+30);
+                        _scene.AddObject(bullet);
                     }
                     break;
             }

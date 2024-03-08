@@ -12,6 +12,7 @@ namespace App2.Objects
     {
         private Random random = new Random();
         private int check;
+        private Obstacle2 o2;
 
         public Obstacle2(Scene scene, string fileName, double speed, int width, double placeX, double placeY) : base(scene, fileName, placeX, placeY)
         {
@@ -40,7 +41,16 @@ namespace App2.Objects
                 }
             }
             
+        } 
+        public override void Collide(GameObject obj)
+        {
+            if (obj is Bullet bullet)
+            {
+                _scene.RemoveObject(this);
+                _scene.RemoveObject(bullet);
+                _X = GenerateRandomNumberInRange(2000, 3000);
+                _scene.AddObject(this);
+            }
         }
-
     }
 }
