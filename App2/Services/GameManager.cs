@@ -23,11 +23,11 @@ namespace App2.Services
             var obstacle1 = new Obstacle1(Scene, "Runner/obstacle-1.gif", 1, 50, 1000, 735);
             Scene.AddObject(obstacle1);
 
-            var cloud1 = new Cloud(Scene, "Runner/Cloud.png", 100, 1500, 200);
+            var cloud1 = new Cloud(Scene, "Runner/Cloud.png", 100, 1500, 150);
             Scene.AddObject(cloud1);
             var cloud2 = new Cloud(Scene, "Runner/Cloud.png", 100, 1000, 100);
             Scene.AddObject(cloud2);
-            var cloud3 = new Cloud(Scene, "Runner/Cloud.png", 100, 400, 150);
+            var cloud3 = new Cloud(Scene, "Runner/Cloud.png", 100, 400, 100);
             Scene.AddObject(cloud3);
             var sun1 = new Sun(Scene, "Runner/sun.png", 2, 100, Scene.ActualWidth-100, 0);
             Scene.AddObject(sun1);

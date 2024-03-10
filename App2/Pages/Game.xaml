@@ -11,7 +11,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets/Background/WhiteTheme.jpg"></ImageBrush>
+            <ImageBrush ImageSource="/Assets/Background/49422.jpg"></ImageBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -54,9 +54,9 @@
             <TextBlock x:Name="Timer" FontSize="1" Width="10" Height="3" Foreground="Gray" FontFamily="David" Text="000000"></TextBlock>
         </Viewbox>
         <TextBlock Grid.Row="0" Grid.Column="0"  FontSize="55" Foreground="Gray" FontFamily="David" Grid.ColumnSpan="4" HorizontalAlignment="Center">SCORE:</TextBlock>
-        <TextBlock Grid.Row="2" Grid.Column="5"  FontSize="64" Foreground="Black" FontFamily="David" Grid.ColumnSpan="4" HorizontalAlignment="Center">Dinosaour Runner</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="5"  FontSize="64" Foreground="Black" FontFamily="David" Grid.ColumnSpan="4" HorizontalAlignment="Center"></TextBlock>
         <Border Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="12" Grid.RowSpan="14" BorderBrush="Black" BorderThickness="5" CornerRadius="20">
-            <GameServices:GameScene x:Name="scene" Background="White"></GameServices:GameScene>
+            <GameServices:GameScene x:Name="scene" Background="Transparent"></GameServices:GameScene>
         </Border>
 
         <Button Style="{StaticResource MyButtonStyle}" x:Name="bthExit" Grid.Row="0" Grid.Column="13" Grid.ColumnSpan="1" Grid.RowSpan="2" Background="Transparent">

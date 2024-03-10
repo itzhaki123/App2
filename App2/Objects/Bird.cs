@@ -19,7 +19,7 @@ namespace App2.Objects
         {
             Image.Width = width;
             Image.Height = width;
-            _dX = -18;
+            _dX = -15;
             check = 0;
         }
         public int GenerateRandomNumberInRange(int minValue, int maxValue)
@@ -34,7 +34,7 @@ namespace App2.Objects
             if (_X < 0)
             {
                 _Y = check;
-                _X = GenerateRandomNumberInRange(4500, 8000);
+                _X = GenerateRandomNumberInRange(6000, 9000);
             }
         }
        

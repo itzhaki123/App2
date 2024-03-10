@@ -45,7 +45,7 @@ namespace App2.Objects
         {
             if(key== VirtualKey.Down)
             {
-                Image.Height = 85;
+                Image.Height = 80;
                 //_Y = _Y - 35;
                 _state = StateType.Running;
                 SetImage();
@@ -80,7 +80,7 @@ namespace App2.Objects
                     if (_Y == _scene.ActualHeight-Height)
                     {
                         //MoveTo(_X, 435, _speed);
-                        _dY = -25;
+                        _dY = -24;
                         _ddY = 1.85;
                         _state = StateType.Running;
                     }
