@@ -4,14 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0377C171-064E-414A-992F-6ACF404054FC}</ProjectGuid>
+    <ProjectGuid>{967ADC54-669C-41BD-B54F-667513DC7A0E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GameEnginer</RootNamespace>
-    <AssemblyName>GameEnginer</AssemblyName>
+    <RootNamespace>DataBaseProject</RootNamespace>
+    <AssemblyName>DataBaseProject</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -120,20 +120,14 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Objects\GameMovingObject.cs" />
-    <Compile Include="Objects\GameObject.cs" />
+    <Compile Include="Models\Level.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Constants.cs" />
-    <Compile Include="Services\GameEvents.cs" />
-    <Compile Include="Services\Manager.cs" />
-    <Compile Include="Services\MusicPlayer.cs" />
-    <Compile Include="Services\Scene.cs" />
-    <Compile Include="Services\SoundPlayer.cs" />
-    <EmbeddedResource Include="Properties\GameEnginer.rd.xml" />
+    <EmbeddedResource Include="Properties\DataBaseProject.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.14</Version>
+      <Version>6.2.12</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

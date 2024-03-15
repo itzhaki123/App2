@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -185,6 +186,7 @@ namespace App2
 
         private void playImage_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
+            string dbPath = ApplicationData.Current.LocalFolder.Path;
             Frame.Navigate(typeof(Game));
         }
 

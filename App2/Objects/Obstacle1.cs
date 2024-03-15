@@ -17,7 +17,7 @@ namespace App2.Objects
         {
             Image.Width = width;
             Image.Height = width;
-            _dX = -7;
+            _dX = -8;
             check = 0;
 
         }
@@ -32,11 +32,11 @@ namespace App2.Objects
             if (_X < 0)
             {
                 _X = GenerateRandomNumberInRange(3200, 3700);
-                _dX -= 1.6;
+                _dX -= 2;
                 check += 1;
                 if (check > 25)
                 {
-                    _dX += 1.6;
+                    _dX += 2;
                 }
             }
 

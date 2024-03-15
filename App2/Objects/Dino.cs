@@ -45,7 +45,7 @@ namespace App2.Objects
         {
             if(key== VirtualKey.Down)
             {
-                Image.Height = 80;
+                Image.Height = 85;
                 //_Y = _Y - 35;
                 _state = StateType.Running;
                 SetImage();
