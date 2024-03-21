@@ -107,10 +107,10 @@
 
             <TextBlock Grid.ColumnSpan="20" Grid.RowSpan="4" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="David">Sign Up</TextBlock>
             <TextBlock Foreground="White" Grid.ColumnSpan="20" Grid.RowSpan="7" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="David">Profile Details</TextBlock>
-            <TextBox PlaceholderText="Enter your nickname." CornerRadius="15" Width="300" Grid.RowSpan="9" Grid.ColumnSpan="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBox>
-            <TextBox PlaceholderText="Enter your E-Mail address." CornerRadius="15" Width="300" Grid.RowSpan="11" Grid.ColumnSpan="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBox>
-            <PasswordBox PlaceholderText="Enter your password." CornerRadius="15" Width="300" Grid.RowSpan="13" Grid.ColumnSpan="20" VerticalAlignment="Center" HorizontalAlignment="Center"></PasswordBox>
-            <PasswordBox PlaceholderText="Repeat your password." CornerRadius="15" Width="300" Grid.RowSpan="15" Grid.ColumnSpan="20" VerticalAlignment="Center" HorizontalAlignment="Center"></PasswordBox>
+            <TextBox x:Name="userNameTextBox" PlaceholderText="Enter your nickname." CornerRadius="15" Width="300" Grid.RowSpan="9" Grid.ColumnSpan="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBox>
+            <TextBox x:Name="userMailTextBox" PlaceholderText="Enter your E-Mail address." CornerRadius="15" Width="300" Grid.RowSpan="11" Grid.ColumnSpan="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBox>
+            <PasswordBox x:Name="pass1" PlaceholderText="Enter your password." CornerRadius="15" Width="300" Grid.RowSpan="13" Grid.ColumnSpan="20" VerticalAlignment="Center" HorizontalAlignment="Center"></PasswordBox>
+            <PasswordBox x:Name="pass2" PlaceholderText="Repeat your password." CornerRadius="15" Width="300" Grid.RowSpan="15" Grid.ColumnSpan="20" VerticalAlignment="Center" HorizontalAlignment="Center"></PasswordBox>
             <Button Style="{StaticResource MyButtonStyle}" x:Name="saveBtn" Grid.Row="8" Grid.RowSpan="4" Grid.Column="8" Grid.ColumnSpan="4"  Background="Transparent">
                 <Image x:Name="PopUpSaveImage" Source="/Assets/Buttons/Save (1).png" PointerEntered="PopUpSaveImage_PointerEntered" PointerExited="PopUpSaveImage_PointerExited" PointerPressed="PopUpSaveImage_PointerPressed"></Image>
             </Button>

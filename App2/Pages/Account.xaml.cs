@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.RegularExpressions;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -62,9 +64,30 @@ namespace App2.Pages
             Frame.Navigate(typeof(MenuPage));
         }
 
-        private void PopUpSaveImage_PointerPressed(object sender, PointerRoutedEventArgs e)
+        private async void PopUpSaveImage_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MenuPage));
+            if (userNameTextBox.Text == String.Empty || userMailTextBox.Text == String.Empty || pass1.Password == String.Empty || pass2.Password == String.Empty)
+            {
+                await new MessageDialog("Missing Data", "Error").ShowAsync();
+            }
+            else if (!pass1.Equals(pass2))
+            {
+                await new MessageDialog("Passwords don't match!", "Error").ShowAsync();
+            }
+            else if (!IsStrongPassword(pass1.Password))
+            {
+                await new MessageDialog("Password is not strong enough!", "Error").ShowAsync();
+            }
+            else if (!IsValidEmail(userMailTextBox.Text))
+            {
+                await new MessageDialog("Mail has not set correctly!", "Error").ShowAsync();
+            }
+        }
+
+        public static bool IsStrongPassword(string password) { return password.Length >= 8 && password.Any(char.IsUpper) && password.Any(char.IsLower) && password.Any(char.IsDigit) && password.Any(ch => !char.IsLetterOrDigit(ch)); }
+        public static bool IsValidEmail(string email)
+        {
+            string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"; return Regex.IsMatch(email, emailPattern);
         }
 
         private void PopUpSaveImage_PointerEntered(object sender, PointerRoutedEventArgs e)
