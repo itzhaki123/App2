@@ -1,4 +1,5 @@
 ﻿
+using DataBaseProject.Models;
 using Microsoft.Data.Sqlite;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,11 @@ namespace DataBaseProject
                 }
                 return null;
             }
+        }
+
+        public static GameUser AddNewUser(string text, string password1, string password2)
+        {
+            throw new NotImplementedException();
         }
     }
 }

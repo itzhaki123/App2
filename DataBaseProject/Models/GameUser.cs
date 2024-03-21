@@ -12,6 +12,6 @@ namespace DataBaseProject.Models
         public string UserName { get; set; } = "anonymous";
         public string Usermail { get; set; } = "None Email";
         public int Score { get; set; } = 0;
-        public GameLevel CurrentLevel { get; set; } = null;
+        public GameLevel CurrentLevel { get; set; } = new GameLevel();
     }
 }

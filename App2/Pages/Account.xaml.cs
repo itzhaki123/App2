@@ -1,4 +1,6 @@
-﻿using System;
+﻿using App2.Services;
+using DataBaseProject;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -81,6 +83,22 @@ namespace App2.Pages
             else if (!IsValidEmail(userMailTextBox.Text))
             {
                 await new MessageDialog("Mail has not set correctly!", "Error").ShowAsync();
+            }
+            else
+            {
+                int? userId = Server.ValidateUser(userNameTextBox.Text.Trim(), pass1.Password.Trim());
+
+                if (userId == null)//המשתמש לא נמצא במסד הנתונים ולכן יש להוסיפו למאגר
+                {
+                    //מוסיפים את המשתמש למסד הנתונים
+                    GameManager.GameUser = Server.AddNewUser(userNameTextBox.Text, pass1.Password, pass2.Password);
+                    //כאן יש להציג הודעה שהמשתמש התווסף בהצלחה
+                    Frame.Navigate(typeof(Game));
+                }
+                else //המשתמש כבר קיים במאגר, עליו יש להכנס לחשבון קיים
+                {
+                    //Sign In כאן יש להציג הודעה שעל המשתמש לגשת ל
+                }
             }
         }
 

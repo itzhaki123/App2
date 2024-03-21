@@ -1,4 +1,5 @@
 ﻿using App2.Objects;
+using DataBaseProject.Models;
 using GameEnginer.Services;
 using System;
 
@@ -6,6 +7,7 @@ namespace App2.Services
 {
     public class GameManager : Manager
     {
+        public static GameUser GameUser { get; set; } = new GameUser();
         public GameManager(Scene scene) : base(scene)
         {
             scene.Ground = scene.ActualHeight - 40;

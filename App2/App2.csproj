@@ -279,6 +279,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataBaseProject\DataBaseProject.csproj">
+      <Project>{967adc54-669c-41bd-b54f-667513dc7a0e}</Project>
+      <Name>DataBaseProject</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GameEnginer\GameEnginer.csproj">
       <Project>{0377c171-064e-414a-992f-6acf404054fc}</Project>
       <Name>GameEnginer</Name>
