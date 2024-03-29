@@ -58,13 +58,109 @@ namespace DataBaseProject
             AddUserProduct(userId.Value);
             return GetUser(userId.Value);
         }
-
-
         private static void AddGameData(int userid)
         {
-            string query = $"INSERT INTO [GameData] (UserID, CurrentLevelId, CurentProductId, MaxLevel, Money," +
-                $"Values({userid}, {1}, {1},{1},{0})";
+            string query = $"INSERT INTO [GameData] (UserID, CurentProductId, Score," +
+                $"Values({userid}, {1},{1},{0})";
             Execute(query);
+        }
+        private static void Execute(string query)
+        {
+            using (SqliteConnection connection = new SqliteConnection(connectionString))
+            {
+                connection.Open();
+                SqliteCommand command = new SqliteCommand(query, connection);
+                command.ExecuteNonQuery();
+            }
+        }
+
+        private static void AddUserProduct(int userId, int productId = 1)
+        {
+            string query = $"INSERT INTO [UserProduct] (UserId, ProductId) VALUES ({userId}, {1})";
+            Execute(query);
+        }
+        /*
+   הפעולה מחזירה משתמש אשר כל שדותיו מלאים
+   הפעולה אוספת נתונים מ- 4 טבלאות וממלאה באמצעותם את המשתמש 
+   ולוקחת משם User כדי שיוכל לגשת למשחק. בשלב התחלתי הפעולה ניגשת לטבלת
+   של המשתמש Id,Name,Mail
+   הממשיכה למלא את נתוני המשתמש,SetUser לאחר מכן הפעולה נעזרת בפעולת עזר 
+ */
+        public static GameUser GetUser(int userId)
+        {
+            GameUser user = null;
+            string query = $"SELECT UserId, UserName, UserMail FROM [User] WHERE UserId={userId}";
+            using (SqliteConnection connection = new SqliteConnection(connectionString))
+            {
+                connection.Open();
+                SqliteCommand command = new SqliteCommand(query, connection);
+                SqliteDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    user = new GameUser
+                    {
+                        UserId = reader.GetInt32(0),
+                        UserName = reader.GetString(1),
+                        Usermail = reader.GetString(2),
+                    };
+                }
+            }
+            if (user != null)
+            {
+                SetUser(user);//המשך מילוי משתמש
+            }
+            return user; // user doesnt exsit
+        }
+
+        /*
+          הפעולה ממשיכה למלא את שדותיו של המשתמש. בשלב הראשון
+          MaxLevel,Money,CurrentLevelId,CurrentProductId :ושולפת משם את נתוני המשחק של המשתמש GameData היא ניגשת לטבלת 
+          נכנסים וממלאים משתמש MaxLevel,Money ,כמו כן 
+          במשתמש CurrentLevel -על מנת למלא את ה Level ניגשים לטבלת CurrentLevelId לאחר מכן באמצעות 
+          SetCurrentLevel על זה תהיה אחראית פעולת עזר  
+          GameData ששלפנו מהטבלה currentProductId בשלב הבא בעזרת 
+          אשר השחקן שיחק בפעם האחרונה Feature -כדי לשלוף ממנה את השם ה Product ניגשים לטבלה 
+          SetCurrentProduct על זה תהיה אחראית הפעולה .GameUser -הנתון הזה גם יכנס ל
+          GameUser לסיכום, באופן מדורג נאספו הנתונים מארבע טבלאות ומילאו את העצם   
+          כעת יוכל המשתמש לגשת למשחק
+          */
+        private static void SetUser(GameUser user)
+        {
+            int currentProductId = 0;
+            string query = $"SELECT , Money, CurrentProductId FROM [GameData] WHERE UserId={user.UserId}";
+            using (SqliteConnection connection = new SqliteConnection(connectionString))
+            {
+                connection.Open();
+                SqliteCommand command = new SqliteCommand(query, connection);
+                SqliteDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    user.Score = reader.GetInt32(1);
+                    currentProductId = reader.GetInt32(2);
+                }
+            }
+            SetCurrentProduct(user, currentProductId);
+        }
+        /*
+Fitcher -שולפת ממנה את שם ה currentProductId ולפי Product הפעולה מסייעת לגשת לטבלת 
+GameUser מסוג user אותו היא שמה במשתנה  
+ */
+        private static void SetCurrentProduct(GameUser user, int currentProductId)
+        {
+            string query = $"SELECT ProductName FROM [Product] WHERE ProductId={currentProductId}";
+            using (SqliteConnection connection = new SqliteConnection(connectionString))
+            {
+                connection.Open();
+                SqliteCommand command = new SqliteCommand(query, connection);
+                SqliteDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    user.UsingProduct = reader.GetString(0);
+                }
+            }
         }
     }
 }
