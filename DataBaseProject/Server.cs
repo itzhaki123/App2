@@ -60,8 +60,8 @@ namespace DataBaseProject
         }
         private static void AddGameData(int userid)
         {
-            string query = $"INSERT INTO [GameData] (UserID, CurentProductId, Score," +
-                $"Values({userid}, {1},{1},{0})";
+            string query = $"INSERT INTO [GameData] (UserID, CurentProductId, Score)" +
+                $"VALUES ({userid}, {1},{0})";
             Execute(query);
         }
         private static void Execute(string query)
@@ -128,7 +128,7 @@ namespace DataBaseProject
         private static void SetUser(GameUser user)
         {
             int currentProductId = 0;
-            string query = $"SELECT , Money, CurrentProductId FROM [GameData] WHERE UserId={user.UserId}";
+            string query = $"SELECT Score, CurentProductId FROM [GameData] WHERE UserId={user.UserId}";
             using (SqliteConnection connection = new SqliteConnection(connectionString))
             {
                 connection.Open();
@@ -138,7 +138,6 @@ namespace DataBaseProject
                 {
                     reader.Read();
                     user.Score = reader.GetInt32(1);
-                    currentProductId = reader.GetInt32(2);
                 }
             }
             SetCurrentProduct(user, currentProductId);
@@ -149,7 +148,7 @@ GameUser מסוג user אותו היא שמה במשתנה
  */
         private static void SetCurrentProduct(GameUser user, int currentProductId)
         {
-            string query = $"SELECT ProductName FROM [Product] WHERE ProductId={currentProductId}";
+            string query = $"SELECT ProducteName FROM [Product] WHERE ProductId={currentProductId}";
             using (SqliteConnection connection = new SqliteConnection(connectionString))
             {
                 connection.Open();

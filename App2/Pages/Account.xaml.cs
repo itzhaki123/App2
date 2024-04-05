@@ -72,7 +72,7 @@ namespace App2.Pages
             {
                 await new MessageDialog("Missing Data", "Error").ShowAsync();
             }
-            else if (!pass1.Equals(pass2))
+            else if (!pass2.Password.Equals(pass1.Password))
             {
                 await new MessageDialog("Passwords don't match!", "Error").ShowAsync();
             }
@@ -97,7 +97,7 @@ namespace App2.Pages
                 }
                 else //המשתמש כבר קיים במאגר, עליו יש להכנס לחשבון קיים
                 {
-                    //Sign In כאן יש להציג הודעה שעל המשתמש לגשת ל
+                    await new MessageDialog("This account exist", "Eroor").ShowAsync();
                 }
             }
         }
