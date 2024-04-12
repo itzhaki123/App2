@@ -60,7 +60,7 @@ namespace DataBaseProject
         }
         private static void AddGameData(int userid)
         {
-            string query = $"INSERT INTO [GameData] (UserID, CurentProductId, Score)" +
+            string query = $"INSERT INTO [GameData] (UserID, Score, CurentProductId)" +
                 $"VALUES ({userid}, {1},{0})";
             Execute(query);
         }

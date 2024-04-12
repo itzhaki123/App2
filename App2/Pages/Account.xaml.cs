@@ -61,9 +61,24 @@ namespace App2.Pages
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
         }
 
-        private void ApplySign_PointerPressed(object sender, PointerRoutedEventArgs e)
+        private async void ApplySign_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MenuPage));
+            if (SignInName.Text == String.Empty || SignInPass.Password == String.Empty)
+            {
+                await new MessageDialog("Missing Data", "Error").ShowAsync();
+            }
+            else
+            {
+                int? userId = Server.ValidateUser(SignInName.Text.Trim(), SignInPass.Password.Trim());
+                if(userId==null)
+                    await new MessageDialog("user doesnt exit", "Error").ShowAsync();
+                else
+                {
+                    await new MessageDialog("Sign in seccesfully").ShowAsync();
+                    GameManager.GameUser= Server.GetUser(userId.Value);
+                    Frame.Navigate(typeof(MenuPage));
+                }
+            }
         }
 
         private async void PopUpSaveImage_PointerPressed(object sender, PointerRoutedEventArgs e)
@@ -92,8 +107,9 @@ namespace App2.Pages
                 {
                     //מוסיפים את המשתמש למסד הנתונים
                     GameManager.GameUser = Server.AddNewUser(userNameTextBox.Text, pass1.Password, pass2.Password);
-                    //כאן יש להציג הודעה שהמשתמש התווסף בהצלחה
-                    Frame.Navigate(typeof(Game));
+
+                    await new MessageDialog("sign in seccesfully!", "Error").ShowAsync();
+                    Frame.Navigate(typeof(MenuPage));
                 }
                 else //המשתמש כבר קיים במאגר, עליו יש להכנס לחשבון קיים
                 {

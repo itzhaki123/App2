@@ -169,11 +169,9 @@
 
             <TextBlock Grid.ColumnSpan="20" Grid.RowSpan="4" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans">Sign In</TextBlock>
             <TextBlock Foreground="White" Grid.ColumnSpan="20" Grid.RowSpan="7" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans">Profile Details</TextBlock>
-            <TextBox PlaceholderText="Enter your nickname." CornerRadius="15" Width="300" Grid.RowSpan="9" Grid.ColumnSpan="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBox>
-            <PasswordBox PlaceholderText="Enter your password." CornerRadius="15" Width="300" Grid.RowSpan="13" Grid.ColumnSpan="20" VerticalAlignment="Center" HorizontalAlignment="Center"></PasswordBox>
-            <Button Style="{StaticResource MyButtonStyle}" x:Name="enterBtn" Grid.Row="8" Grid.RowSpan="4" Grid.Column="8" Grid.ColumnSpan="4"  Background="Transparent">
-                <Image x:Name="PopUpEnterBtnImage" Source="/Assets/Buttons/Check(4).png"></Image>
-            </Button>
+            <TextBox x:Name="SignInName" PlaceholderText="Enter your nickname." CornerRadius="15" Width="300" Grid.RowSpan="9" Grid.ColumnSpan="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBox>
+            <PasswordBox x:Name="SignInPass" PlaceholderText="Enter your password." CornerRadius="15" Width="300" Grid.RowSpan="13" Grid.ColumnSpan="20" VerticalAlignment="Center" HorizontalAlignment="Center"></PasswordBox>
+           
             <Button Style="{StaticResource MyButtonStyle}" x:Name="btnApply" Grid.Column="8" Grid.Row="7"
      Grid.ColumnSpan="4" Grid.RowSpan="5" Background="Transparent">
                 <Image x:Name="ApplySign" Source="/Assets/Buttons/Check (4).png" PointerEntered="ApplySign_PointerEntered" PointerExited="ApplySign_PointerExited" PointerPressed="ApplySign_PointerPressed"></Image>
