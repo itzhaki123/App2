@@ -116,6 +116,7 @@ namespace App2
 
         private void exitImage_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
+            string dbPath = ApplicationData.Current.LocalFolder.Path;
             popupGrid.Visibility= Visibility.Visible;
         }
 
