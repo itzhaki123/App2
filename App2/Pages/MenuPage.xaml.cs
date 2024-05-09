@@ -168,22 +168,22 @@ namespace App2
             MusicGrid.Visibility = Visibility.Visible; 
         }
 
-        private void LevelListImage_PointerEntered(object sender, PointerRoutedEventArgs e)
-        {
-            LevelListImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/Buttons/LevelList (2).png"));
-            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
-        }
+        //private void LevelListImage_PointerEntered(object sender, PointerRoutedEventArgs e)
+        //{
+        //    LevelListImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/Buttons/LevelList (2).png"));
+        //    Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
+        //}
 
-        private void LevelListImage_PointerExited(object sender, PointerRoutedEventArgs e)
-        {
-            LevelListImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/Buttons/LevelList (1).png"));
-            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
-        }
+        //private void LevelListImage_PointerExited(object sender, PointerRoutedEventArgs e)
+        //{
+        //    LevelListImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/Buttons/LevelList (1).png"));
+        //    Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
+        //}
 
-        private void LevelListImage_PointerPressed(object sender, PointerRoutedEventArgs e)   
-        {
-            Frame.Navigate(typeof(LevelsPage));
-        }
+        //private void LevelListImage_PointerPressed(object sender, PointerRoutedEventArgs e)   
+        //{
+        //    Frame.Navigate(typeof(LevelsPage));
+        //}
 
         private void playImage_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
@@ -206,6 +206,23 @@ namespace App2
         private void HelpImage_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             Frame.Navigate(typeof(Help));
+        }
+
+        private void shopImage_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            shopImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/Buttons/Shop (2).png"));
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
+        }
+
+        private void shopImage_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            shopImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/Buttons/Shop (1).png"));
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
+        }
+
+        private void shopImage_PointerPressed_1(object sender, PointerRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Shop2));
         }
     }
 }
