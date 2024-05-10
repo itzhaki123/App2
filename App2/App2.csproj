@@ -11,7 +11,7 @@
     <AssemblyName>App2</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.22621.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -241,6 +241,7 @@
     <Content Include="Assets\Runner\cloud.png" />
     <Content Include="Assets\Runner\dead.png" />
     <Content Include="Assets\Runner\DiBen.png" />
+    <Content Include="Assets\Runner\dino-running.gif" />
     <Content Include="Assets\Runner\DinoBending.png" />
     <Content Include="Assets\Runner\obstacle-1.gif" />
     <Content Include="Assets\Runner\obstacle-2.gif" />
@@ -298,6 +299,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="ClassDiagram4.cd" />
+    <None Include="ClassDiagram5.cd" />
     <None Include="DBGame.db" />
     <None Include="DBGame.sqbpro" />
     <None Include="פרויקט גמר במדעי המחשב.docx" />

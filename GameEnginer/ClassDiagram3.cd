@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GameEnginer.Objects.GameMovingObject" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAADAAAAAAAAAAAAAIABAAAIAAAAIBAAAAAAAAA=</HashCode>
+      <FileName>Objects\GameMovingObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameEnginer.Objects.GameObject" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAJAAAAAQAAAAAAMUAAyQAABAAABICAAQAAAA=</HashCode>
+      <FileName>Objects\GameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameEnginer.Services.Constants" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Constants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameEnginer.Services.GameEvents" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAgAAAQAAAAAAAAMAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\GameEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameEnginer.Services.Manager" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAhgAAAACAAAgAAgAAAAAQAAgAAIAAAQAAAAQgEIEA=</HashCode>
+      <FileName>Services\Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameEnginer.Services.Scene" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAgAAAAAAAAAAAAAgAATAAAAAAAAAACAAAAEAI=</HashCode>
+      <FileName>Services\Scene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameEnginer.Services.SoundPlayer" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\SoundPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameEngine.Services.MusicPlayer" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAIAAAAAQAAAAAAoAIAAACAAAA=</HashCode>
+      <FileName>Services\MusicPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

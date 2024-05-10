@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="App2.Objects.Bird" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAABQAAAAAAAA=</HashCode>
+      <FileName>Objects\Bird.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App2.Objects.Bullet" Collapsed="true">
+    <Position X="9.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App2.Objects.Cloud" Collapsed="true">
+    <Position X="4.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Objects\Cloud.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App2.Objects.Dino" Collapsed="true">
+    <Position X="7" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAQAABAACAUAAAAAAAAABBACAAAAAAA=</HashCode>
+      <FileName>Objects\Dino.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App2.Objects.Obstacle1" Collapsed="true">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAIAAAAAAAAAAQAAAAAAAAAABQAAAAAAAA=</HashCode>
+      <FileName>Objects\Obstacle1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App2.Objects.Obstacle2" Collapsed="true">
+    <Position X="14.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAIAAAAAAAAAAQAAAAIAAAAABQAAAAAAAA=</HashCode>
+      <FileName>Objects\Obstacle2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App2.Objects.Sun" Collapsed="true">
+    <Position X="11.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Sun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App2.Services.GameManager" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Services\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App2.Services.GameScene" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\GameScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataBaseProject.Models.GameUser" Collapsed="true">
+    <Position X="15.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DataBaseProject.Models.Product" Collapsed="true">
+    <Position X="15.25" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DataBaseProject.Server" Collapsed="true">
+    <Position X="13.5" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GameEnginer.Objects.GameObject" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GameEnginer.Objects.GameMovingObject" Collapsed="true">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GameEngine.Services.MusicPlayer" Collapsed="true">
+    <Position X="15.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GameEnginer.Services.Constants" Collapsed="true">
+    <Position X="13.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GameEnginer.Services.Scene" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GameEnginer.Services.GameEvents" Collapsed="true">
+    <Position X="13.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GameEnginer.Services.Manager" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="App2.App" Collapsed="true">
+    <Position X="8" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAIAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App2.MenuPage" Collapsed="true">
+    <Position X="6.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BRAAIAQwAoARCAIAAAQgAAIABAAgAIAFJCAkAIBAIgA=</HashCode>
+      <FileName>Pages\MenuPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App2.Pages.Account" Collapsed="true">
+    <Position X="9.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAECAAAAAIAGAAQAAQAAAAAAAAAAAAAAgBAAEAAAAA=</HashCode>
+      <FileName>Pages\Account.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App2.Pages.Game" Collapsed="true">
+    <Position X="6.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAACAAAAAAAAAAAAAAAAQAAAAAABAAAAAAAIAA=</HashCode>
+      <FileName>Pages\Game.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App2.Pages.Help" Collapsed="true">
+    <Position X="9.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Help.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App2.Pages.LevelsPage" Collapsed="true">
+    <Position X="8" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAQAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Pages\LevelsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App2.Pages.Shop2" Collapsed="true">
+    <Position X="11.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAIAA=</HashCode>
+      <FileName>Pages\Shop2.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
