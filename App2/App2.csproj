@@ -313,6 +313,9 @@
     <None Include="ClassDiagram3.cd" />
     <None Include="ClassDiagram4.cd" />
     <None Include="ClassDiagram5.cd" />
+    <None Include="DBGame.db" />
+    <None Include="DBGame.sqbpro" />
+    <None Include="פרויקט גמר במדעי המחשב %281%29.docx" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
