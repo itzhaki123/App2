@@ -9,7 +9,7 @@ namespace DataBaseProject.Models
     public class Product
     {
         public int ProductId { get; set; } = 1;
-        public string ProductName { get; set; } = string.Empty;
+        public string ProductName { get; set; } = "Dead";
         public int ProductPrice { get; set; } = 0;
     }
 }

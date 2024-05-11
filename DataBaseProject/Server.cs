@@ -12,6 +12,7 @@ namespace DataBaseProject
 {
     public static class Server
     {
+        private static List<Product> _products = null;
         private static string dbPath = ApplicationData.Current.LocalFolder.Path; //נתיב מסד נתונים במחשב
         private static string connectionString = "Filename=" + dbPath + "\\DBGame.db"; //המחרוזת שבאמצעותה נוכל להתחבר למסד הנתונים
         /*
@@ -72,12 +73,6 @@ namespace DataBaseProject
                 SqliteCommand command = new SqliteCommand(query, connection);
                 command.ExecuteNonQuery();
             }
-        }
-
-        private static void AddUserProduct(int userId, int productId = 1)
-        {
-            string query = $"INSERT INTO [UserProduct] (UserId, ProductId) VALUES ({userId}, {1})";
-            Execute(query);
         }
         /*
    הפעולה מחזירה משתמש אשר כל שדותיו מלאים
@@ -148,7 +143,7 @@ GameUser מסוג user אותו היא שמה במשתנה
  */
         private static void SetCurrentProduct(GameUser user, int currentProductId)
         {
-            string query = $"SELECT ProducteName FROM [Product] WHERE ProductId={currentProductId}";
+            string query = $"SELECT ProductName FROM [Product] WHERE ProductId={currentProductId}";
             using (SqliteConnection connection = new SqliteConnection(connectionString))
             {
                 connection.Open();
@@ -159,6 +154,63 @@ GameUser מסוג user אותו היא שמה במשתנה
                     reader.Read();
                     user.UsingProduct = reader.GetString(0);
                 }
+            }
+        }
+        public static void AddUserProduct(int userId, int productId = 1)
+        {
+            string query = $"INSERT INTO [UserProduct] (UserId,ProductId) VALUES ({userId},{productId})";
+            Execute(query);
+        }
+
+        /*
+           Fitchers -ושולפת ממנה את כל ה,Product הפעולה נגשת לחנות - טבלה  
+        */
+        public static List<Product> GetProducts()
+        {
+            if (_products == null)
+            {
+                _products = new List<Product>();
+                string query = $"SELECT * FROM [Product]";
+                using (SqliteConnection connection = new SqliteConnection(connectionString))
+                {
+                    connection.Open();
+                    SqliteCommand command = new SqliteCommand(query, connection);
+                    SqliteDataReader reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Product product = new Product
+                            {
+                                ProductId = reader.GetInt32(0),
+                                ProductPrice = reader.GetInt32(1),
+                                ProductName = reader.GetString(2),
+                            };
+                            _products.Add(product);
+                        }
+                    }
+                }
+            }
+            return _products;
+        }
+        public static List<int> GetOwnProductsId(GameUser gameUser)
+        {
+            List<int> ownProductsIds = new List<int>();
+            string query = $"SELECT ProductId FROM [UserProduct] WHERE UserId={gameUser.UserId}";
+            using (SqliteConnection connection = new SqliteConnection(connectionString))
+            {
+                connection.Open();
+                SqliteCommand command = new SqliteCommand(query, connection);
+                SqliteDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        ownProductsIds.Add(reader.GetInt32(0));
+                    }
+                    return ownProductsIds;
+                }
+                return null;
             }
         }
     }

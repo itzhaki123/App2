@@ -18,7 +18,7 @@ namespace App2.Objects
         {
             Image.Width = width;
             Image.Height = width;
-            _dX = -8;
+            _dX = -6;
             check = 0;
 
         }

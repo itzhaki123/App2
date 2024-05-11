@@ -222,7 +222,7 @@ namespace App2
 
         private void shopImage_PointerPressed_1(object sender, PointerRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Shop2));
+            Frame.Navigate(typeof(StorePage));
         }
     }
 }

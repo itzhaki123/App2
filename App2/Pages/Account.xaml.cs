@@ -75,7 +75,7 @@ namespace App2.Pages
                 else
                 {
                     await new MessageDialog("Sign in seccesfully").ShowAsync();
-                    GameManager.GameUser= Server.GetUser(userId.Value);
+                    GameManager.Player= Server.GetUser(userId.Value);
                     Frame.Navigate(typeof(MenuPage));
                 }
             }
@@ -106,7 +106,7 @@ namespace App2.Pages
                 if (userId == null)//המשתמש לא נמצא במסד הנתונים ולכן יש להוסיפו למאגר
                 {
                     //מוסיפים את המשתמש למסד הנתונים
-                    GameManager.GameUser = Server.AddNewUser(userNameTextBox.Text, pass1.Password, pass2.Password);
+                    GameManager.Player = Server.AddNewUser(userNameTextBox.Text, pass1.Password, pass2.Password);
 
                     await new MessageDialog("sign in seccesfully!", "Error").ShowAsync();
                     Frame.Navigate(typeof(MenuPage));

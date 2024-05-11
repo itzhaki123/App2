@@ -7,7 +7,7 @@ namespace App2.Services
 {
     public class GameManager : Manager
     {
-        public static GameUser GameUser { get; set; } = new GameUser();
+        public static GameUser Player { get; set; } = new GameUser();
         public GameManager(Scene scene) : base(scene)
         {
             scene.Ground = scene.ActualHeight - 40;

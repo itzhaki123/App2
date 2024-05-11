@@ -11,7 +11,7 @@
     <AssemblyName>App2</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.22621.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -144,6 +144,9 @@
     <Compile Include="Pages\Shop2.xaml.cs">
       <DependentUpon>Shop2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\StorePage.xaml.cs">
+      <DependentUpon>StorePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\GameManager.cs" />
     <Compile Include="Services\GameScene.cs" />
@@ -220,6 +223,7 @@
     <Content Include="Assets\Buttons\Leaderboard %282%29.png" />
     <Content Include="Assets\Buttons\LevelList %281%29.png" />
     <Content Include="Assets\Buttons\LevelList %282%29.png" />
+    <Content Include="Assets\Buttons\Like %281%29.png" />
     <Content Include="Assets\Buttons\Music %281%29.png" />
     <Content Include="Assets\Buttons\Music %282%29.png" />
     <Content Include="Assets\Buttons\Play %281%29.png" />
@@ -245,6 +249,7 @@
     <Content Include="Assets\Runner\DinoBending.png" />
     <Content Include="Assets\Runner\obstacle-1.gif" />
     <Content Include="Assets\Runner\obstacle-2.gif" />
+    <Content Include="Assets\Runner\ExclusiveDino.png" />
     <Content Include="Assets\Runner\SheildDino.gif" />
     <Content Include="Assets\Runner\sun.png" />
     <Content Include="Assets\Runner\Bullet.png" />
@@ -282,6 +287,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\StorePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
@@ -304,9 +313,6 @@
     <None Include="ClassDiagram3.cd" />
     <None Include="ClassDiagram4.cd" />
     <None Include="ClassDiagram5.cd" />
-    <None Include="DBGame.db" />
-    <None Include="DBGame.sqbpro" />
-    <None Include="פרויקט גמר במדעי המחשב.docx" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
